@@ -1,0 +1,194 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Krisztian Pinter | Work</title>
+  <meta name="description" content="You can find here my University projects and other Front-End & UX works.">
+  <meta name="author" content="Krisztian Pinter">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/tooltipster.css" /> <!--Creating tooltips for the skills section http://iamceege.github.io/tooltipster/-->
+  <link rel="stylesheet" type="text/css" href="css/flaticon.css"><!--Flat icons by freepik.com-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/css/animsition.min.css" /> <!--Page transitions-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+
+  
+</head>
+
+<body>
+
+	<!--SKIPLINKS-->
+		<p class="skiplinks">
+		<a href="#skipnav">Skip to content</a>
+		<a href="#skiptonav">Skip to navigation</a>
+		</p>
+		 
+		 
+		 
+	<header class="work" id="shownav" role="banner">
+	
+	
+	<!--NAVIGATION-->
+
+		<nav role="navigation" id="skiptonav">
+				<ul>
+					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip animsition-link">Home</a></li>
+					<li><a href="about.html" title="About Kris" class="tooltip animsition-link">About</a></li>
+					<li><a href="works.html" title="Front-end and UX showcase" class="tooltip coloured animsition-link">Work</a></li>
+					<li><a href="blog.html" title="Read about my thoughts" class="tooltip animsition-link">Blog</a></li>
+					<li><a href="contact.html" title="Get in touch" class="tooltip animsition-link">Contact</a></li>
+				</ul>
+		</nav>
+		
+	<section class="hero" id="skipnav">
+			<div class="animsition">
+			
+				
+					<h1><span class="coloured">Work</span></h1>
+					
+		
+					<blockquote><p>Fall in love with problems,<span class="coloured"> then with solutions.</span></p></blockquote>
+				
+				
+			</div>
+				
+				
+				
+		
+	</section>
+	
+	</header>
+	<main role="main">
+
+		
+		
+		<section>
+		
+			<div class="row">
+			<ul id="filter" class="item">
+				  <li class="current"><a href="#">All</a></li>
+				  <li><a href="#" title="University Projects">University</a></li>
+				  <li><a href="#" title="Agile Projects">Agile</a></li>
+				  <li><a href="#" title="Bootstrap based Projects">Bootstrap</a></li>
+				  <li><a href="#" title="Wordpress Projects">WordPress</a></li>
+				  <li><a href="#" title="Ecommerce Projects">Ecommerce</a></li>
+				  <li><a href="#" title="User Experience Design">UX</a></li>
+			</ul>
+		    </div>
+		
+		<div class="row">
+				<ul id="portfolio">
+				
+					  <li class="university item">
+					  <a href="old.html" title="Read about my old portfolio."><img src="img/old-thumbnail.jpg" alt="Screenshot of my old portfolio" class="greyscale" />Old Portfolio</a>
+					  </li>
+					  <li class="university item">
+					  <a href="mm.html" title="Read about my Media Making project."><img src="img/mm-thumbnail.jpg" alt="Screenshot of Media Making Website"  class="greyscale" />Media Making Website</a>
+					  </li>
+					  <li class="university agile bootstrap item">
+					  <a href="sports.html" title="Read about my 2nd year agile project."><img src="img/sports-thumbnail.jpg" alt="Screenshot of sports website for students in Manchester" class="greyscale">Sports Website</a>
+					  </li>
+					  <li class="university agile item">
+					  <a href="infocomms.html" title="Read about my Infocomms website rebuild."><img src="img/ico-thumbnail.jpg" alt="Screeenshot of MMU Journalism, Information and Communications Website Redesign" class="greyscale">Infocomms Website</a>
+					  </li>
+					  <li class="wordpress ecommerce item">
+					  <a href="luca.html" title="Read about how I built this ecommerce store."><img src="img/luca-thumbnail.jpg" alt="Screenshot of Luca Christoph's Website" class="greyscale"/>Luca Christoph</a>
+					  </li>
+					  <li class="wordpress bootstrap item">
+					  <a href="rendeles.html" title="Read about how I built this WordPress website."><img src="img/rendeles-thumbnail.jpg" alt="Screenshot of Rendeles.net" class="greyscale">Rendeles.net</a>
+					  </li>
+					  <li class="ux university item">
+					  <a href="stagecoach.html" title="Stagecoach UX work."><img src="img/stagecoach-thumbnail.jpg" alt="Stagecoach UX Coming soon"  class="greyscale"/>Stagecoach UX</a>
+					  </li>
+					  <li class="ux agile university item">
+					  <a href="http://www.13148000.webdevmmu.uk/test/" title="Eve Hampson Photography"><img src="img/photography-thumbnail.jpg" alt="EH Photography" class="greyscale"/>E.H. Photography</a>
+					  </li>
+					  
+				</ul>
+		</div>
+		
+		</section>
+		
+	
+		
+	</main>
+	<!--FOOTER-->
+	<footer  role="contentinfo">
+	<hr>
+		<p>© 2016 Krisztian Pinter. All rights reserved</p>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+    </script>	
+    <script> <!---Portfolio filtering----->
+	  $(document).ready(function() {
+	  $('ul#filter a').click(function() {
+		$(this).css('outline','none');
+		$('ul#filter .current').removeClass('current');
+		$(this).parent().addClass('current');
+		
+		var filterVal = $(this).text().toLowerCase().replace(' ','-');
+			
+		if(filterVal == 'all') {
+		  $('ul#portfolio li.hidden').fadeIn('slow').removeClass('hidden');
+		} else {
+		  $('ul#portfolio li').each(function() {
+			if(!$(this).hasClass(filterVal)) {
+			  $(this).fadeOut('normal').addClass('hidden');
+			} else {
+			  $(this).fadeIn('slow').removeClass('hidden');
+			}
+		  });
+		}
+		
+		return false;
+	  });
+	});
+	<!-- Tooltipster -->
+	$(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+		
+    </script>	
+	<script>
+	$(document).ready(function() {
+  $(".animsition").animsition({
+    inClass: 'fade-in',
+    outClass: 'fade-out',
+    inDuration: 1500,
+    outDuration: 800,
+    linkElement: '.animsition-link',
+    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+    loading: true,
+    loadingParentElement: 'body', //animsition wrapper element
+    loadingClass: 'animsition-loading',
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    overlay : false,
+    overlayClass : 'animsition-overlay-slide',
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
+  });
+});
+	 </script>
+	
+</body>
+</html>

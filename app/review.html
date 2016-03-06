@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Krisztian Pinter | Portfolio Review</title>
+  <meta name="description" content="I have created a list of usability issues & solutions that my portfolio had.">
+  <meta name="author" content="Krisztian Pinter">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+
+  
+</head>
+
+<body>
+
+	<!--SKIPLINKS-->
+		<p class="skiplinks">
+		<a href="#skipnav">Skip to content</a>
+		<a href="#skiptonav">Skip to navigation</a>
+		</p>
+		 
+		 
+	
+	<!--NAVIGATION-->
+
+		<nav role="navigation" id="skiptonav">
+				<ul>
+					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a></li>
+					<li><a href="about.html" title="About Kris" class="tooltip">About</a></li>
+					<li><a href="works.html" title="Front-end and UX showcase" class="tooltip">Work</a></li>
+					<li><a href="blog.html" title="Read about my thoughts" class="tooltip coloured">Blog</a></li>
+					<li><a href="contact.html" title="Get in touch" class="tooltip">Contact</a></li>
+				</ul>
+		</nav>
+		
+	
+	<main class="container" role="main">
+		<section id="skipnav">
+		
+		<img src="img/version1.jpg" alt="First version of my website" title="Long main page." class="heroimg">
+		
+		<h1 class="blog-title">Portfolio Review</h1>
+
+		<p>I have reviewed my portfolio multiple times with my tutors, classmates and industry professionals. Some key usability issues were found during the tests. I have created a list of issues and solutions:</p>
+		<p><strong>Issue #1:</strong> The main page were too long, and the navigation triggered only if the user scrolled down on the page to a certain point, thus some people did not notice the navigation bar and have not seen the rest of the pages.</p>
+		<p><strong>Solution #1:</strong> Some users thought my website consists only one page, because of the hidden navigation. It made me worried as I have written a loads of content.  To fix this I have made the navigation bar prominent and visible, I also created an about page to make the main page a bit shorter. Now it is much easier to navigate and find the content on the website.</p>
+		<hr>
+		<p><strong>Issue #2:</strong> The header background on some pages was a landscape image, and it made the text difficult to read.</p>
+		<p><strong>Solution #2:</strong> The background image has been changed to a pattern image, which makes good contrast, and also smaller file size to download.</p>
+		<hr>
+		<p><strong>Issue #3:</strong> Weak Meta description. <i>“Krisztian Pinter's Agency Ready Web Developer Portfolio.”</i> It did not reflect to my skills.</p>
+		<p><strong>Solution #3:</strong> Changed the meta description: <i>“Looking for a skilled UX designer & Front-End Developer? Look no further, contact me.”</i> It is important to have an engaging meta description, because that’s what people can see on Google, when they search. It has to convince people to click on my website and not on others.</p>
+		<hr>
+		<img src="img/typo.jpg" alt="Book" title="Jason Santa Maria - On Web Typography" class="centered">
+		<p><strong>Issue #4:</strong> Due to the font-family and the small letter-spacing, it was difficult to read the body text and it became boring after a while.</p>
+		<p><strong>Solution #4:</strong> I’ve been inspired by Jason Santa Maria – On Web Typography book, and realized, that the fonts I was using were not appropriate for long text, and I set too small letter-spacing which also affected the readability. Thus I have changed the paragraphs to a well-known Serif font, called EB Garamond and also set the letter-spacing to 0.05em. Probably when you read this text, you already perceived it is much more comfortable for your eyes.</p>
+		<hr>
+		<img src="img/form.jpg" alt="form" title="Not accessible contact form." class="centered">
+		<p><strong>Issue #5:</strong> The contact form was not accessible.</p>
+		<p><strong>Solution #5:</strong> When I firstly built this portfolio, the contact form had only some placeholder text. I thought it is perfectly enough. Unfortunately the screen readers skip the placeholders and it makes impossible to understand the website for disabled users. Then I read a webpage about Form Accessibility (<a href="http://webaim.org/techniques/forms/">http://webaim.org/techniques/forms/</a>). It suggests to use labels, as it makes the form well-organized and highly usable.
+		Some users were missing my downloadable CV and my email address from the contact section, as not everyone like to send email through forms, thus I have added these features on the page.</p>
+
+
+
+
+		</section>
+	</main>
+	
+	<!--FOOTER-->
+	<footer  role="contentinfo">
+	<hr>
+		<p>© 2016 Krisztian Pinter. All rights reserved</p>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+    </script>	
+</body>
+</html>
