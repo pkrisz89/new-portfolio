@@ -9,8 +9,10 @@ $cta : #004600;
 $grey : #eee;
 $white: #fff;
 $black : #333;
-$lightblack: lighten($black, 60%);
-$lightgrey: lighten($black, 75%);
+$lightgrey: #dedede;
+$darkgrey: #5C5C5C;
+$midgrey: #A8A8A8;
+
 $gold  : #D4AF37;
 $lightgold: lighten($gold, 30%);
 

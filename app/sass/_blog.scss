@@ -1,0 +1,28 @@
+/************** BLOG ****************/
+
+.blogpost {
+	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
+	padding: 1.5em;
+	margin: 1.5em;
+		hr {
+			color: #333;
+			width: 5em;
+			text-align: center;
+			margin: 0 auto;
+		}
+		h2 {
+			text-align: center;
+			font-weight: 400;
+		}
+
+}
+
+
+.heroimg {
+	margin-top: 6em;
+}
+
+.container .blog-title {
+	margin-top: 0em;
+}
+

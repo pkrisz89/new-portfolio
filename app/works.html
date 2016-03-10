@@ -12,10 +12,11 @@
   <link rel="stylesheet" type="text/css" href="css/tooltipster.css" /> <!--Creating tooltips for the skills section http://iamceege.github.io/tooltipster/-->
   <link rel="stylesheet" type="text/css" href="css/flaticon.css"><!--Flat icons by freepik.com-->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/css/animsition.min.css" /> <!--Page transitions-->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
@@ -32,12 +33,12 @@
 		 
 		 
 		 
-	<header class="work" id="shownav" role="banner">
+	<header class="work header" id="shownav" role="banner">
 	
 	
 	<!--NAVIGATION-->
 
-		<nav role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip animsition-link">Home</a></li>
 					<li><a href="about.html" title="About Kris" class="tooltip animsition-link">About</a></li>
@@ -51,7 +52,7 @@
 			<div class="animsition">
 			
 				
-					<h1><span class="coloured">Work</span></h1>
+					<h1 class="hero-title"><span class="coloured">Work</span></h1>
 					
 		
 					<blockquote><p>Fall in love with problems,<span class="coloured"> then with solutions.</span></p></blockquote>
@@ -128,6 +129,7 @@
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('.tooltip').tooltipster();

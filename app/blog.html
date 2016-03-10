@@ -12,10 +12,11 @@
   <link rel="stylesheet" type="text/css" href="css/tooltipster.css" /> <!--Creating tooltips for the skills section http://iamceege.github.io/tooltipster/-->
   <link rel="stylesheet" type="text/css" href="css/flaticon.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/css/animsition.min.css" /> <!--Page transitions-->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
@@ -37,7 +38,7 @@
 	
 	<!--NAVIGATION-->
 
-		<nav role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip animsition-link">Home</a></li>
 					<li><a href="about.html" title="About Kris" class="tooltip animsition-link">About</a></li>
@@ -47,11 +48,11 @@
 				</ul>
 		</nav>
 		
-		<section class="hero" id="skipnav">
+		<section class="work header" id="skipnav">
 			
 			<div class="animsition">
 				
-					<h1><span class="coloured">Blog</span></h1>
+					<h1 class="hero-title"><span class="coloured">Blog</span></h1>
 					
 					<blockquote><p>The internet has no eraser</p></blockquote>
 
@@ -69,30 +70,30 @@
 		<section class="row">
 		
 		<div class="blogpost">
-		<h2>Gridset Report - Performance optimisation in Web Design</h2>
+		<h2 class="title">Gridset Report - Performance optimisation in Web Design</h2>
 		<hr>
 		<img src="img/gridset_logo.jpg" alt="Gridset Report Logo" title="Gridset report" class="centered">
 		<p>I have recently read the Responsive Report 2014 by Gridset. It has highlighted the key concerns and challenges that the web industry facing and shown the direction where it goes. </p>
-		<a href="gridset.html">Read the full article</a>
+		<a class="button2" href="gridset.html">Read the full article</a>
 		</div>
 		
 		<div class="blogpost">
-		<h2>How it's made</h2>
+		<h2 class="title">How it's made</h2>
 		<hr>
 		<img src="img/howitsmade-thumbnail.jpg" alt="Endless lines of code" title="Coding Javascript" class="centered">
 		<p>Finally it’s done. I have spent quite a few hours on this project, thousand lines of code has been written and several litres of coffee been drank. I have created this website for a final year University subject, called Agency Ready.</p>
-		<a href="howitsmade.html">Read the full article</a>
+		<a class="button2" href="howitsmade.html">Read the full article</a>
 		</div>
 		
 		</section>
 		
 		<section class="row">
 		<div class="blogpost">
-		<h2>Portfolio Review</h2>
+		<h2 class="title">Portfolio Review</h2>
 		<hr>
 		<img src="img/review-mini.jpg" alt="Contact form" title="Contact form is not accessible." class="centered">
 		<p>I have reviewed my portfolio multiple times with my tutors, classmates and industry professionals. Some key usability issues were found during the tests.</p>
-		<a href="review.html">Read the full article</a>
+		<a class="button2" href="review.html">Read the full article</a>
 		</div>
 		
 		</section>
@@ -109,6 +110,7 @@
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('.tooltip').tooltipster();
