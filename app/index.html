@@ -12,15 +12,15 @@
   <link rel="stylesheet" type="text/css" href="css/tooltipster.css" /> <!--Creating tooltips for the skills section http://iamceege.github.io/tooltipster/-->
   <link rel="stylesheet" type="text/css" href="css/flaticon.css"><!--Flat icons by freepik.com-->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/css/animsition.min.css" /> <!--Page transitions-->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
-  
 </head>
 
 <body>
@@ -32,12 +32,12 @@
 		</p>
 		 
 		 
-	<header role="banner">
+	<header class="header" role="banner">
 	
 	
 	<!--NAVIGATION-->
 
-		<nav class="mainnav" role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
 			
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip coloured animsition-link">Home</a></li>
@@ -55,11 +55,11 @@
 		<div class="animsition">	
 			
 					
-					<h1>Hi, My name is <span class="coloured">Kris Pinter</span></h1>
+					<h1 class="hero-title">Hi, My name is <span class="coloured">Kris Pinter</span></h1>
 					
 			<div class="row">	
 				<div class="item">
-				<img src="img/main-header.png" alt="asd">
+				<img src="img/main-header.png" alt="Web Developer's Desktop">
 				</div>
 				<div class="item">
 					<p class="herotext">
@@ -68,7 +68,7 @@
 					I build accessible, usable and attractive interfaces which are using valid web standards.
 					I work with agile project management principles, when I'm building websites.
 					</p>
-					<a href="about.html" class="button2"><p class="button2">MORE ABOUT ME</p></a>
+					<a href="about.html" class="button2">MORE ABOUT ME</a>
 				<blockquote><p>Design is not just what it looks like and feels like.<br> Design is how it works.</p>	</blockquote>				
 				
 				</div>
@@ -83,7 +83,7 @@
 	<!--SKILLS SECTION-->
 		<section class="hard-skills" id="shownav">
 		
-			<h2>I can work with these... <span class="anim">&#8595;</span></h2>
+			<h2>I can work with these... &#8595;</h2>
 			<img src="img/html.png" alt="HTML5" class="greyscale tooltip" title="I am writing accessible, standard-based, semantic HTML5 markup."> <img src="img/css3.png" alt="CSS3" class="greyscale tooltip" title="I am using most of the CSS3 features that are working across the modern browsers."> <img src="img/js.png" alt="JavaScript" class="greyscale tooltip" title="I am using JS/jQuery for basic DOM manipulation and form validation."><img src="img/sass.png" alt="SASS Preprocessor" class="greyscale tooltip" title="I know how to use SASS efficiently in order to create maintainable CSS code.">
 			<img src="img/ps.png" alt="PHOTOSHOP" class="greyscale tooltip" title="I am using Photoshop for image manipulation."> <img src="img/wordpress.png" alt="WordPress" class="greyscale tooltip" title="I am able to customize and build (on basic level) WordPress themes."> <img src="img/axure.png" alt="Axure RP" class="greyscale tooltip" title="I am using this tool to create lo-fi/hi-fi wireframes for UX projects."><img src="img/github.png" alt="GitHub" class="greyscale tooltip" title="I am currently learning how to use this tool for effective version control."> 
 		
@@ -102,6 +102,7 @@
 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js"></script>
     <script>
         $(document).ready(function() {

@@ -12,11 +12,12 @@
   <link rel="stylesheet" type="text/css" href="css/tooltipster.css" /> <!--Creating tooltips for the skills section http://iamceege.github.io/tooltipster/-->
   <link rel="stylesheet" type="text/css" href="css/flaticon.css"><!--Flat icons by freepik.com-->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/css/animsition.min.css" /> <!--Page transitions-->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
@@ -35,7 +36,8 @@
 	
 	<!--NAVIGATION-->
 
-		<nav role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
+			
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip animsition-link">Home</a></li>
 					<li><a href="about.html" title="About Kris" class="tooltip coloured animsition-link">About</a></li>
@@ -43,22 +45,24 @@
 					<li><a href="blog.html" title="Read about my thoughts" class="tooltip animsition-link">Blog</a></li>
 					<li><a href="contact.html" title="Get in touch" class="tooltip animsition-link">Contact</a></li>
 				</ul>
+			
 		</nav>
+		
 	<main role="main">
 		<div class="animsition">
 		<section class="skewed-bg parallax">
 		<div class="soft-skills">
 		
-			<h2>A bit more <span class="coloured">about me</span>...</h2>
+			<h1 class="hero-title">A bit more <span class="coloured">about me</span>...</h1>
 			<div class="row">
 				<div class="item">
 				
-				<span class="flaticon-teamwork"></span><h3>Teamwork</h3>
+				<span class="flaticon-teamwork"></span><h2 class="title">Teamwork</h2>
 				<p>"If everyone is moving forward together, then success takes care of itself." During my University years, we had several subjects where we had to work in smaller groups. I have particularly enjoyed this experience, for the reason that with combined effort we were able to achieve greater results than individually.</p>
 				</div>
 				
 				<div class="item">
-				<span class="flaticon-network67"></span><h3>Communication</h3>
+				<span class="flaticon-network67"></span><h2 class="title">Communication</h2>
 				<p>I have extensive customer-facing work experience. As a former call centre agent and hotel receptionist, I learnt how to communicate with colleagues, clients and superiors effectively in written and verbal manner. Both roles required strong listening skills in order to solve problematic situations.</p>
 				</div>
 			</div>
@@ -66,12 +70,12 @@
 			<div class="row">
 				<div class="item">
 				
-				<span class="flaticon-programmer"></span><h3>Critical Thinking</h3>
+				<span class="flaticon-programmer"></span><h2 class="title">Critical Thinking</h2>
 				<p>I am always evaluating and carefully analysing the possible outcomes before I make a decision. When I build a website, I am often faced with several different implementation methods. In these situations I have to quickly analyse and test each method before I choose the right one.</p>
 				</div>
 				
 				<div class="item">
-				<span class="flaticon-repair13"></span><h3>Problem Solving</h3>
+				<span class="flaticon-repair13"></span><h2 class="title">Problem Solving</h2>
 				<p>“Fall in love with problems, then with solutions.” I believe, in web development & UXD, every product is a solution for someone else’s problem. Therefore it is vital to understand the users (and their problems) in order to create outstanding digital experience.</p>
 				</div>
 	
@@ -79,12 +83,12 @@
 			<div class="row">
 				<div class="item">
 				
-				<span class="flaticon-brains1"></span><h3>Agile Mindset</h3>
+				<span class="flaticon-brains1"></span><h2 class="title">Agile Mindset</h2>
 				<p>“There is no failure, only feedback” When I am facing, something particularly challenging, I always take it as an opportunity to learn something new. This mentality helps to keep my positive attitude and overcome obstacles.</p>
 				</div>
 				<div class="item">	
 				
-				<span class="flaticon-chat21"></span><h3>Multilingual</h3>
+				<span class="flaticon-chat21"></span><h2 class="title">Multilingual</h2>
 				<p>“To have another language is to possess a second soul.” I was originally born and raised in Hungary, moved to UK in 2012. My first language is Hungarian, I have a good command of English and a basic level of German.</p>
 				</div>
 			</div>
@@ -96,7 +100,7 @@
 		<section class="skewed-bg2 parallax">
 		<div class="lovehate">
 			
-			<h2><span class="coloured">&hearts; Love</span> and Hate &#128128;</h2>
+			<h1 class="hero-title"><span class="coloured">&hearts; Love</span> and Hate &#128128;</h1>
 			
 			<div class="row">
 	
@@ -144,6 +148,7 @@
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.1/js/animsition.min.js"></script>
 	<script type="text/javascript" src="js/parallax.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('.tooltip').tooltipster();

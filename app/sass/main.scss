@@ -1,0 +1,128 @@
+@import "variables";
+@import "mixins";
+@import "typo";
+@import "helper";
+@import "header";
+@import "nav";
+@import "about";
+
+
+/***General styles***/
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    @include border-box;
+    }
+
+.skiplinks {           /*Recommended solution by http://webaim.org/techniques/css/invisiblecontent/*/
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+img {
+	height: auto;
+    max-width: 100%;
+}
+
+
+/************** FLEX BOX ****************/
+
+
+.row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	max-width: 55em;
+	margin: 0 auto;
+	flex-direction: column;
+}
+
+
+.item {
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
+	padding: 1em;
+}
+
+
+
+/************** LINKS ****************/
+a:link {
+	color: $black;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: inherit;
+}
+
+a:hover {
+	color: $link;
+	transition: ease .9s;
+}
+
+a:active {
+	color: $link;
+}
+
+/************** FOOTER ****************/
+
+footer {
+	width: 100%;
+	background: #fff;
+	height: 6em;
+	margin: 0;
+	padding-top: 3em;
+}
+
+footer p {
+	text-align: center;
+}
+
+footer hr {
+    color: #333;
+    max-width: 8em;
+    text-align: center;
+	margin: auto;
+}
+
+
+

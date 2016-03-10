@@ -1,0 +1,359 @@
+/********* Typography *************/
+/**h1, .h1 {
+  font-family: $default;
+
+  .wf-active & {
+    font-family: $hero-title; }
+}**/
+.title {
+  font-family: Georgia;
+  color: #525252;
+  padding: 1%;
+  margin: 1%;
+  font-size: 20px;
+  font-size: 1.25rem; }
+  .wf-active .title {
+    font-family: "Jura"; }
+
+.hero-title {
+  font-family: Georgia;
+  color: #525252;
+  padding: 1%;
+  margin: 1%;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  font-size: 30px;
+  font-size: 1.875rem; }
+  .wf-active .hero-title {
+    font-family: "Lobster"; }
+
+p {
+  font-family: "EB Garamond";
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  padding: 0.5%;
+  margin: 1%;
+  letter-spacing: 0.02em;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  line-height: 1.3;
+  text-align: justify;
+  color: #333; }
+
+/***Helper Classes****/
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/************** HEADER & INTRO ****************/
+.header {
+  background-image: url("../img/swirl_pattern.png");
+  border-bottom: 1px #333 solid; }
+
+.coloured {
+  color: #CC3300 !important; }
+
+/*.hero .row .item p {
+	line-height: 1.3;
+	font-size: 1.2em;
+	color: #333;
+	text-align: justify;
+	max-width: 30em;
+	padding-bottom: 1.5em;
+}*/
+.hero .row .item p.herotext {
+  background: #fff;
+  border: 1px #eee solid;
+  padding: 5%;
+  border-radius: 5%;
+  margin-bottom: 2em; }
+
+.hero .row .item img {
+  padding-bottom: 2em;
+  height: auto;
+  max-width: 100%; }
+
+blockquote {
+  margin: 1.5em 10px;
+  padding: 2em 10px;
+  margin: 0 auto;
+  text-align: center; }
+  blockquote p {
+    font-style: italic;
+    font-size: 20px;
+    font-size: 1.25rem;
+    text-align: center; }
+  blockquote:before {
+    color: #333;
+    content: open-quote;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 0.1em;
+    vertical-align: -0.4em; }
+  blockquote:after {
+    color: #333;
+    content: close-quote;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 0.1em;
+    vertical-align: -0.4em; }
+
+.button2 {
+  padding: 1em 2em;
+  border: 1px #333 solid;
+  font-family: "EB Garamond";
+  color: #333;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 15em;
+  display: block;
+  text-decoration: none !important; }
+  .button2:hover {
+    background: #333;
+    color: #eee;
+    opacity: 0.9;
+    transition: ease .9s;
+    opacity: 0.9; }
+
+.featured {
+  background: #333;
+  opacity: 0.6; }
+
+.featured p {
+  opacity: 1;
+  color: #fff !important; }
+
+/************** NAVIGATION ****************/
+.main-nav {
+  background: #fff;
+  width: 100%;
+  padding: 3%;
+  z-index: 1;
+  border-bottom: 1px #333 solid;
+  position: fixed;
+  top: 0; }
+  .main-nav ul li {
+    font-family: 'EB Garamond', serif;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+    float: left; }
+    .main-nav ul li:last-child {
+      margin-right: 0px; }
+    .main-nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-family: 'Garamond';
+      font-weight: 300;
+      font-size: 20px;
+      font-size: 1.25rem;
+      padding-right: .5em; }
+
+/************** HARD SKILLS ****************/
+.greyscale {
+  -webkit-filter: grayscale(1);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1); }
+  .greyscale:hover {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+    transition: ease .9s; }
+
+.hard-skills {
+  margin: 0 auto;
+  max-width: 880px;
+  max-width: 55rem;
+  text-align: center; }
+
+/************** SOFT SKILLS ****************/
+.soft-skills p {
+  border-top: 1px #333 solid;
+  padding: 2%;
+  line-height: 1.3;
+  max-width: 25em;
+  letter-spacing: 0.05em;
+  text-align: left;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto; }
+
+.soft-skills .row .item {
+  background: #eee;
+  border-radius: 5%;
+  opacity: 0.9;
+  margin: 1em;
+  padding: auto;
+  border: 1px #333 solid; }
+  .soft-skills .row .item span {
+    color: #333; }
+
+.skewed-bg {
+  /*background-image: url("../img/soft-bg.jpg");*/
+  background: #fff;
+  padding: 0;
+  -ms-transform: skew(0deg, -5deg);
+  -webkit-transform: skew(0deg, -5deg);
+  transform: skew(0deg, -5deg);
+  margin-top: -12em; }
+  .skewed-bg .soft-skills {
+    -ms-transform: skew(0deg, 5deg);
+    -webkit-transform: skew(0deg, 5deg);
+    transform: skew(0deg, 5deg);
+    text-align: center;
+    padding-top: 10em; }
+    .skewed-bg .soft-skills h1 {
+      padding-top: 3em;
+      padding-bottom: 1em; }
+
+.soft-skills .row:last-child {
+  padding-bottom: 2em; }
+
+/************** LOVE AND HATE ****************/
+.lovehate .row {
+  max-width: 85%;
+  margin: 0 auto; }
+  .lovehate .row .item ul li p {
+    font-weight: 300;
+    display: inline-block;
+    font-size: 2em;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
+  .lovehate .row .love ul li {
+    background: #cc0000;
+    color: #fff;
+    margin: 1em;
+    padding: 0.2em;
+    border-radius: 5px;
+    opacity: 0.9; }
+  .lovehate .row .hate ul li {
+    background: #333;
+    color: #fff;
+    margin: 1em;
+    padding: 0.2em;
+    border-radius: 5px;
+    opacity: 0.9; }
+
+.skewed-bg2 {
+  background-color: #efe1b5;
+  /*background-image: url("../img/lovehate.jpg");
+	background-size: cover;*/
+  -ms-transform: skew(0deg, -5deg);
+  -webkit-transform: skew(0deg, -5deg);
+  transform: skew(0deg, -5deg); }
+  .skewed-bg2 .lovehate {
+    -ms-transform: skew(0deg, 5deg);
+    -webkit-transform: skew(0deg, 5deg);
+    transform: skew(0deg, 5deg); }
+    .skewed-bg2 .lovehate h1 {
+      -ms-transform: skew(0deg, -5deg);
+      -webkit-transform: skew(0deg, -5deg);
+      transform: skew(0deg, -5deg);
+      text-shadow: 5px 5px 3px #969696; }
+
+/***General styles***/
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.skiplinks {
+  /*Recommended solution by http://webaim.org/techniques/css/invisiblecontent/*/
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+textarea {
+  resize: vertical; }
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+.ie7 .title {
+  padding-top: 20px; }
+
+img {
+  height: auto;
+  max-width: 100%; }
+
+/************** FLEX BOX ****************/
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 55em;
+  margin: 0 auto;
+  flex-direction: column; }
+
+.item {
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  padding: 1em; }
+
+/************** LINKS ****************/
+a:link {
+  color: #333;
+  text-decoration: underline; }
+
+a:visited {
+  color: inherit; }
+
+a:hover {
+  color: #CC3300;
+  transition: ease .9s; }
+
+a:active {
+  color: #CC3300; }
+
+/************** FOOTER ****************/
+footer {
+  width: 100%;
+  background: #fff;
+  height: 6em;
+  margin: 0;
+  padding-top: 3em; }
+
+footer p {
+  text-align: center; }
+
+footer hr {
+  color: #333;
+  max-width: 8em;
+  text-align: center;
+  margin: auto; }

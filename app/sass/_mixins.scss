@@ -1,0 +1,162 @@
+@function calculateRem($size) { 
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin border-box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+    }
+	
+
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+top: $top;
+right: $right;
+bottom: $bottom;
+left: $left;
+position: absolute;
+}
+
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
+}
+
+
+@mixin button($padding,$bg-color,$font-color,$font-size,$font-weight,$hover-color,$borderradius)
+{
+border:0px;
+margin:0px;
+display:inline-block;
+padding:$padding;
+background:$bg-color;
+color:$font-color;
+font-size:$font-size;
+font-weight:$font-weight;
+-webkit-border-radius: $borderradius;
+-moz-border-radius: $borderradius;
+border-radius: $borderradius;
+text-decoration:none;
+cursor:pointer;
+&:before, &:after
+	{
+	content: "";
+     	display: table;
+    	}
+&:after
+	{
+	clear: both;
+	}
+&:hover
+	{
+	background:$hover-color;
+	}
+}
+
+@mixin animated-caption($font-color, $bg-color, $bg-opacity, $padding, $transition-speed)
+{
+display:inline-block;
+position:relative;
+overflow:hidden;
+& img
+	{
+	display:block;
+	width:100%;
+	height:auto;
+	}
+& span.outer
+	{
+	display:block;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding:$padding;
+	color:$font-color;
+	position:absolute;
+	bottom:-100px;
+	-webkit-transition: bottom $transition-speed ease;
+	-moz-transition: bottom $transition-speed ease;
+	-o-transition: bottom $transition-speed ease;
+	-ms-transition: bottom $transition-speed ease;
+	transition: bottom $transition-speed ease;
+	& span.inner
+		{
+		margin:0px;
+		position:relative;
+		}
+	&:before
+		{
+		content: " ";
+		display:block;
+		position:absolute;
+		z-index:0;
+		left:0px;
+		top:0px;
+		width:100%;
+		height:100%;
+		background:$bg-color;
+   		filter: alpha(opactiy=($bg-opacity * 100));
+  		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$bg-opacity * 100})";
+  		-moz-opacity: $bg-opacity;
+  		-khtml-opacity: $bg-opacity;
+  		opacity: $bg-opacity;
+		}
+	}
+&:hover span.outer
+	{	
+	bottom:0px;
+	}
+}

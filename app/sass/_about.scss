@@ -1,0 +1,136 @@
+/************** HARD SKILLS ****************/
+
+.greyscale {
+	-webkit-filter: grayscale(1);
+	filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+	-webkit-filter: grayscale(1);
+	        filter: grayscale(1);
+			
+	&:hover {
+		filter: none;
+		-webkit-filter: grayscale(0%);
+		transition: ease .9s;
+	}
+}
+
+.hard-skills {
+	margin: 0 auto;
+	max-width: 880px;
+	max-width: 55rem;
+	text-align: center;
+}
+
+
+/************** SOFT SKILLS ****************/
+
+.soft-skills p {
+	border-top: 1px $black solid;
+	padding: 2%;
+	line-height: 1.3;
+	max-width: 25em;
+	letter-spacing: 0.05em;
+	text-align: left;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+}
+
+.soft-skills .row .item {
+	background: $grey;
+	border-radius: 5%;
+	opacity: 0.9;
+	margin: 1em;
+	padding: auto;
+	border: 1px $black solid;
+	
+		span {
+			color: $black;
+		}
+}
+
+
+.skewed-bg {
+  /*background-image: url("../img/soft-bg.jpg");*/
+  background: $white;
+  padding: 0;
+  -ms-transform: skew(0deg, -5deg);
+  -webkit-transform: skew(0deg, -5deg);
+  transform: skew(0deg, -5deg);
+  margin-top: -12em;
+  
+	.soft-skills {
+	  -ms-transform: skew(0deg, 5deg);
+	  -webkit-transform: skew(0deg, 5deg);
+	  transform: skew(0deg, 5deg);
+	  text-align: center;
+	  padding-top: 10em;
+		
+		h1 {
+			padding-top: 3em;
+			padding-bottom: 1em;
+			}
+	}
+}
+
+.soft-skills .row:last-child {
+    padding-bottom: 2em;
+}
+
+
+/************** LOVE AND HATE ****************/
+
+.lovehate .row{
+	max-width: 85%;
+	margin: 0 auto;
+	
+		.item ul li p {
+			font-weight: 300;
+			display: inline-block;
+			font-size: 2em;
+			text-align: center;
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			}
+			
+		.love ul li {
+			background: $lovered;
+			color: $white;
+			margin: 1em;
+			padding: 0.2em;
+			border-radius: 5px;
+			opacity: 0.9;
+		}
+		.hate ul li {
+			background: $black;
+			color: $white;
+			margin: 1em;
+			padding: 0.2em;
+			border-radius: 5px;
+			opacity: 0.9;
+		}
+}
+
+.skewed-bg2 {
+	background-color: $lightgold;
+	/*background-image: url("../img/lovehate.jpg");
+	background-size: cover;*/
+
+	-ms-transform: skew(0deg, -5deg);
+	-webkit-transform: skew(0deg, -5deg);
+	transform: skew(0deg, -5deg);
+	
+		.lovehate {
+		  -ms-transform: skew(0deg, 5deg);
+		  -webkit-transform: skew(0deg, 5deg);
+		  transform: skew(0deg, 5deg);
+		  
+			h1 {
+			  -ms-transform: skew(0deg, -5deg);
+			  -webkit-transform: skew(0deg, -5deg);
+			  transform: skew(0deg, -5deg);
+			  text-shadow: 5px 5px 3px rgba(150, 150, 150, 1);
+			}
+		}
+}

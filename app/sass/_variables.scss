@@ -1,0 +1,20 @@
+// colours
+$title : #525252;
+$hero-title : #CC3300;
+$link       : $hero-title;
+$span : $link;
+$lovered : #cc0000;
+
+$grey : #eee;
+$white: #fff;
+$black : #333;
+$lightblack: lighten($black, 60%);
+$lightgrey: lighten($black, 75%);
+$gold  : #D4AF37;
+$lightgold: lighten($gold, 30%);
+
+//Fonts
+$default : Georgia;
+$header : 'Jura';
+$hero-header : 'Lobster';
+$body : 'EB Garamond';

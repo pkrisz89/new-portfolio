@@ -1,0 +1,96 @@
+/************** HEADER & INTRO ****************/
+
+.header{
+	background-image: url("../img/swirl_pattern.png");
+	border-bottom: 1px #333 solid;
+}
+
+
+.coloured {
+	color: $span !important;
+}
+
+
+/*.hero .row .item p {
+	line-height: 1.3;
+	font-size: 1.2em;
+	color: #333;
+	text-align: justify;
+	max-width: 30em;
+	padding-bottom: 1.5em;
+}*/
+
+
+.hero .row .item  {
+	
+		p.herotext {
+			background: $white;
+			border: 1px $grey solid;
+			padding: 5%;
+			border-radius: 5%;
+			margin-bottom: 2em;
+		}
+		img {
+			padding-bottom: 2em;
+			height: auto;
+			max-width: 100%;
+			}
+}
+
+
+
+blockquote {
+  margin: 1.5em 10px;
+  padding: 2em 10px;
+  margin: 0 auto;
+  text-align: center;
+	p {
+	  font-style: italic;
+	  @include font-size(20px);
+	  text-align: center;
+	  }
+	&:before {
+	  color: $black;
+	  content: open-quote;
+	  @include font-size(30px);
+	  line-height: 0.1em;
+	  vertical-align: -0.4em;
+	}
+	&:after {
+	  color: $black;
+	  content: close-quote;
+	  @include font-size(30px);
+	  line-height: 0.1em;
+	  vertical-align: -0.4em;
+	}
+}
+
+
+.button2 {
+	padding: 1em 2em;
+	border: 1px #333 solid;
+	font-family: $body;
+	color: $black;
+	margin: 0 auto;
+	text-align: center;
+	max-width: 15em;
+	display: block;
+	text-decoration: none !important;
+	&:hover{
+		background: $black;
+		color: $grey;
+		opacity: 0.9;
+		transition: ease .9s;
+		opacity: 0.9;
+	}	
+}
+
+.featured {
+	background: $black;
+	opacity: 0.6;
+}
+
+.featured p {
+	opacity: 1;
+	color: $white !important;
+}
