@@ -81,42 +81,50 @@
 /************** LOVE AND HATE ****************/
 
 .lovehate .row{
-	max-width: 85%;
 	margin: 0 auto;
-	
-		.item ul li p {
-			font-weight: 300;
-			display: inline-block;
-			font-size: 2em;
-			text-align: center;
-			position: relative;
-			top: 50%;
-			transform: translateY(-50%);
+			.item ul{
+				list-style-type: none;
+
+				p {
+					font-weight: 300;
+					display: inline-block;
+					color: $white;
+					transform: translateY(-50%);
+					}
+			}	
+			.love ul li {
+				background: $lovered;
+				color: $white;
+				margin: 1em;
+				padding: 0.2em;
+				border-radius: 5px;
+				opacity: 0.9;
 			}
-			
-		.love ul li {
-			background: $lovered;
-			color: $white;
-			margin: 1em;
-			padding: 0.2em;
-			border-radius: 5px;
-			opacity: 0.9;
-		}
-		.hate ul li {
-			background: $black;
-			color: $white;
-			margin: 1em;
-			padding: 0.2em;
-			border-radius: 5px;
-			opacity: 0.9;
-		}
+			.hate ul li {
+				background: $black;
+				color: $white;
+				margin: 1em;
+				padding: 0.2em;
+				border-radius: 5px;
+				opacity: 0.9;
+				}
+					span {
+						padding-right: 5%;
+						@include font-size(8px);
+						margin: -20px !important;
+						opacity: 0.4;
+						position: relative;
+						overflow: hidden;
+					}
 }
+			
+
 
 .skewed-bg2 {
 	background-color: $lightgold;
 	/*background-image: url("../img/lovehate.jpg");
 	background-size: cover;*/
-
+	padding: 0.1em;
 	-ms-transform: skew(0deg, -5deg);
 	-webkit-transform: skew(0deg, -5deg);
 	transform: skew(0deg, -5deg);
@@ -134,3 +142,33 @@
 			}
 		}
 }
+
+/************** CV Download ****************/
+
+.button {
+	font-family: $body;
+	color: $white !important;
+	text-decoration: none !important;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0.25em 0.5em;
+	border: 1px $black solid;
+	background: $cta !important;
+	opacity: 0.8;
+	display: block;
+	max-width: 85%;
+	margin-bottom: 2em;
+	 -ms-transform: skew(0deg, 5deg);
+		  -webkit-transform: skew(0deg, 5deg);
+		  transform: skew(0deg, 5deg);
+		  
+		&:hover{
+			background: $grey !important;
+			color: $black !important;
+			opacity: 0.9;
+			transition: ease .9s;
+			opacity: 0.9;
+		}	
+}
+
+
