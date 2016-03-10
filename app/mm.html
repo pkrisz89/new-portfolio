@@ -9,11 +9,12 @@
   <meta name="author" content="Krisztian Pinter">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
@@ -32,7 +33,7 @@
 	
 	<!--NAVIGATION-->
 
-		<nav role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a></li>
 					<li><a href="about.html" title="About Kris" class="tooltip">About</a></li>
@@ -46,15 +47,15 @@
 	<main class="container" role="main">
 		<section id="skipnav">
 				
-				<h1>Media Making Group Portfolio (1st year University Project)</h1>
-				<h2>About the project</h2>
+				<h1 class="hero-title">Media Making Group Portfolio (1st year University Project)</h1>
+				<h2 class="title">About the project</h2>
 				<p>This website was my first University project. It’s a portfolio site for Media Making subject. Our group has created an employability guide for students. In the short documentary, we made several interviews with different people. My favourite interviewee was Alex Anderson (Talent Manager from Code Computerlove). She gave really useful advices for students on careful usage of social media when applying jobs.</p>
 			
 				<img src="img/mm-1.jpg" alt="Media Making Group portfolio website on mobile and laptop." title="Our media making portfolio.">
 	
 
 				
-				<h2>Challenges</h2>
+				<h2 class="title">Challenges</h2>
 				<p>It was the first time ever when I have created a website that uses jQuery. Jack Franklin’s Beginning jQuery book helped me a lot, and I have also found some useful tutorials on the web (Code Academy, Treehouse). I wanted to try my fresh knowledge and build something that actually works, therefore I have decided to create a navigation system that shows each group member’s profile one-by-one on the main page, and the user can close them with a button. I was happy with the end result, my jQuery was working and the group received first mark.</p>
 	
 			
@@ -71,6 +72,7 @@
 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('.tooltip').tooltipster();

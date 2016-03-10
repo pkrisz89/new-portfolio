@@ -353,7 +353,10 @@ ul#portfolio {
     font-weight: 400; }
 
 .heroimg {
-  margin-top: 6em; }
+  margin-top: 3em; }
+
+.container ul li {
+  font-family: "EB Garamond"; }
 
 .container .blog-title {
   margin-top: 0em; }
@@ -467,6 +470,10 @@ textarea {
 img {
   height: auto;
   max-width: 100%; }
+
+.container {
+  max-width: 90%;
+  margin: auto; }
 
 /************** FLEX BOX ****************/
 .row {

@@ -9,11 +9,12 @@
   <meta name="author" content="Krisztian Pinter">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
@@ -32,7 +33,7 @@
 	
 	<!--NAVIGATION-->
 
-		<nav role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a></li>
 					<li><a href="about.html" title="About Kris" class="tooltip">About</a></li>
@@ -46,22 +47,22 @@
 	<main class="container" role="main">
 		<section id="skipnav">
 				<img src="img/gridset-report.jpg" title="A fully optimised website." alt="A man is using his tablet" class="heroimg"> <!--CC0  From pixabay.com-->
-				<h1 class="blog-title">Performance optimisation in web design</h1>
+				<h1 class="hero-title">Performance optimisation in web design</h1>
 
 				<p>I have recently read the Responsive Report 2014 by Gridset. It has highlighted the key concerns and challenges that the web industry facing and shown the direction where it goes. The report compares the previous three years, built on the answers given by people that are working in this field. It was interesting to see that the major challenge in 2014 was the website performance optimisation. Therefore, I have decided to write a blog post upon this topic. </p>
-				<h2>Why do we need to optimise websites? </h2>
+				<h2 class="title">Why do we need to optimise websites? </h2>
 				<p>The loading speed of websites has become more important than the actual design. The reason behind this that nowadays more internet users are visiting websites from mobile devices than desktop computers. Due to the speed and bandwidth limits of mobile broadband, developers and designers has to compromise and optimise their assets. </p>
 				<p>Did you know that one in four visitors would abandon a website if it does not load within 4 seconds? Furthermore, 46% of them do not revisit poorly performing websites. </p>
 				<p>When Mozilla increased page speed by 2.2 seconds, their download figures rose by 15.4%. It is 10 million downloads a year! </p>
 				<p>Let’s take an ecommerce example: By every 1 second delay in page load time would lead $1.6 billion yearly losses for Amazon. </p>
 				<p>You can see from the above examples that there is a relation between load speed and conversion. Do not make your users frustrated with a slow website, unless you want to achieve poor results. </p>
-				<h2>What can I do? </h2>
+				<h2 class="title">What can I do? </h2>
 				<p>Firstly, I would recommend testing your current speed with different online tools. I am mostly using <a href="http://www.webpagetest.org/" title="Online Speedtest Tool" target="_blank">Webpagetest</a>  and <a href="https://developers.google.com/speed/pagespeed/" title="Google Pagespeed" target="_blank">Google Pagespeed</a>, but there are many different tools out there, such as <a href="https://gtmetrix.com/" title="GTMetrix" target="_blank">GTMetrix</a> or <a href="https://www.pingdom.com/" target="_blank" title="pingdom">Pingdom</a> . </p>
 				<p>After you have received and analysed your data, most of the time it turns out that 80-90% of the issues happen in the front-end. I have created a basic, small list below about how to prevent and/or solve the speed issues: </p>
-				<h3>Scripts and stylesheets: </h3>
+				<h3 class="title">Scripts and stylesheets: </h3>
 				<p>If you have multiple scripts and stylesheets on your website, it could make a negative impact on your website’s performance. 
 				Solution: Combine your stylesheets, script files and minify them. (Here is a handy tool for this task: <a href="http://refresh-sf.com/" target="_blank">http://refresh-sf.com/</a> ) Then place your script file on the bottom of the page, in order to load it last. </p>
-				<h3>Images: </h3>
+				<h3 class="title">Images: </h3>
 				<p>Most of the time your images has the biggest weight in the total size of your project, thus it has key importance to optimise your pictures if you want a lean website. </p>
 				<p>Solution:  Firstly, you have to decide the correct file format. (eg. If you are not using the transparent feature of the .png file format, that what you really need is a much smaller .JPG file. ) </p>
 				<p>Resize your image assets, using Photoshop or similar photo-editor tool, and then reduce the quality. Unfortunately, it is coming with loads of compromises; probably it is the biggest nightmare of designers. However, do not forget: Speed is more important! </p>
@@ -69,16 +70,16 @@
 				<p>If you want to read about this topic in more depth, I would recommend the following Smashing magazine articles: </p>
 				<p><a href="http://www.smashingmagazine.com/2009/07/clever-jpeg-optimization-techniques/" target="_blank">http://www.smashingmagazine.com/2009/07/clever-jpeg-optimization-techniques/</a></p>
 				<p><a href="http://www.smashingmagazine.com/2009/07/clever-png-optimization-techniques/" target="_blank">http://www.smashingmagazine.com/2009/07/clever-png-optimization-techniques/</a></p>
-				<h3>Image Sprites: </h3>
+				<h3 class="title">Image Sprites: </h3>
 				<p>One way to reduce HTTP request is to create an image sprite. It is a method to merge all of your image assets into one file. The benefit of this, that as soon as your main image is loaded, all of your images will be available. There is a super useful tool created by Google, called <a href="http://spriteme.org/">SpriteME</a> . It generates the sprite and creates all the necessary CSS for it. All you need to do is just run it on your website. </p>
 
-				<h3>Online image optimisation tools: </h3>
+				<h3 class="title">Online image optimisation tools: </h3>
 				<p><a href="http://kraken.io" title="Image optimisation tool" target="_blank">Kraken.io</a> & <a href="http://www.imgopt.com/" target="_blank" title="Smush it image optimisation">Smush.it</a> </p>
 				<p>When using the “Save for web” option in Photoshop, there are still remaining ‘extra’ data in your images. The above tools can help you to remove these extra information bits and further reduce the file-size without sacrificing the quality of your images. </p>
-				<h3>Lazy Load: </h3>
+				<h3 class="title">Lazy Load: </h3>
 				<p>Lazy load delays loading of images in long web pages. Images outside the viewport are not loaded until the user scrolls to them. Using this clever script can result faster page load. </p>
 				<p><a href="http://www.appelsiini.net/projects/lazyload" target="_blank" title="Lazy Load Script">http://www.appelsiini.net/projects/lazyload</a></p>
-				<h3>Content Delivery Networks: </h3>
+				<h3 class="title">Content Delivery Networks: </h3>
 				<p>If you use a library or CSS provided by a library, make sure to use the hosted versions of the files (such as jQuery or Bootstrap) </p>
 				<p>Key benefits of using CDN: </p>
 				<ul>
@@ -105,6 +106,7 @@
 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('.tooltip').tooltipster();

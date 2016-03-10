@@ -9,11 +9,12 @@
   <meta name="author" content="Krisztian Pinter">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
@@ -32,7 +33,7 @@
 	
 	<!--NAVIGATION-->
 
-		<nav role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a></li>
 					<li><a href="about.html" title="About Kris" class="tooltip">About</a></li>
@@ -46,15 +47,15 @@
 	<main class="container" role="main">
 		<section id="skipnav">
 				
-				<h1>Rendeles.net</h1>
-				<h2>About the project</h2>
+				<h1 class="hero-title">Rendeles.net</h1>
+				<h2 class="title">About the project</h2>
 				<p>Rendeles.net is a Hungarian sales website. The product offers an e-commerce solution for restaurants that want to expand their services with home delivery. The aim of the website is to encourage people to subscribe with their email addresses in order to try the free version of the software.</p>
 			
 				<img src="img/rendeles-1.jpg" alt="Rendeles.net website on mobile and laptop." title="Rendeles.net">
 	
 
 				
-				<h2>Challenges</h2>
+				<h2 class="title">Challenges</h2>
 				<p>The client wanted a scalable, clean & friendly website that works perfectly on any device.  Thus I  have decided to build the project on WordPress. I was using WP material theme, which based on Bootstrap. The client was too busy, and it was only a side-project for them, therefore I had to write the entire content of the website as well. The hardest part of the project was to figure out how to funnel the visitors to subscribe. I have integrated google analytics on the website, therefore I could always follow what happens on the website and make the consequences of the visitors’ behaviour, then make the necessary changes on the site.</p>
 				
 			
@@ -79,6 +80,7 @@
 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('.tooltip').tooltipster();

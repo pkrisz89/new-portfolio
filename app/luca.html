@@ -9,11 +9,12 @@
   <meta name="author" content="Krisztian Pinter">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
@@ -32,7 +33,7 @@
 	
 	<!--NAVIGATION-->
 
-		<nav role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a></li>
 					<li><a href="about.html" title="About Kris" class="tooltip">About</a></li>
@@ -46,15 +47,15 @@
 	<main class="container" role="main">
 		<section id="skipnav">
 				
-				<h1>Luca Christoph Rug Store</h1>
-				<h2>About the project</h2>
+				<h1 class="hero-title">Luca Christoph</h1>
+				<h2 class="title">About the project</h2>
 				<p>Luca Christoph was one of my first WordPress website. The client sells luxury, handmade, designer rugs and the company planned to expand their business on an e-commerce platform. </p>
 			
 				<img src="img/luca-1.jpg" alt="Luca Christoph website on mobile and laptop." title="Luca christoph's website">
 	
 
 				
-				<h2>Challenges</h2>
+				<h2 class="title">Challenges</h2>
 				<p>I haven’t built too many WordPress website before, and it was my very first e-commerce project, therefore I had to read some articles and tutorials about Woocommerce before I started to build the website. I have quickly overcome the initial difficulties and created a few versions of the website, because the client requested some changes. It was a very good lesson, how to deal with clients and their expectations. The site sits on a shared hosting platform, and using a loads of product photos, therefore the load speed is not optimal. Since I have studied this issue, and learnt about different ways of performance optimisation.</p>
 				
 			
@@ -77,6 +78,7 @@
 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('.tooltip').tooltipster();

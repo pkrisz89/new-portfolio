@@ -9,11 +9,12 @@
   <meta name="author" content="Krisztian Pinter">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
@@ -32,7 +33,7 @@
 	
 	<!--NAVIGATION-->
 
-		<nav role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a></li>
 					<li><a href="about.html" title="About Kris" class="tooltip">About</a></li>
@@ -46,15 +47,15 @@
 	<main class="container" role="main">
 		<section id="skipnav">
 				
-				<h1>Sports Opportunities for students in Manchester</h1>
-				<h2>About the project</h2>
+				<h1 class="hero-title">Sports Opportunities for students in Manchester</h1>
+				<h2 class="title">About the project</h2>
 				<p>At the second year of my University studies, I had a subject called Developing Infocomms Projects. We learnt about different Project Management methodologies and how to apply them on real projects. Our chosen topic was Sports opportunities for students around Manchester. I was working with a group of 7 people. I was responsible for the development of the website. </p>
 			
 				<img src="img/sports-1.jpg" alt="Sports website main page on laptop." title="Sports website, made on bootstrap.">
 	
 
 				
-				<h3>Challenges</h3>
+				<h2 class="title">Challenges</h2>
 				<p>The biggest challenge for the group was to work together efficiently with different people that are not equally committed towards our success. We could overcome this issue by working harder, supporting each other and making sure, we stick to our plans and deadlines. My personal challenge was to learn how to use bootstrap, which turned out is a handy tool if the website has to be done rapidly, but I prefer to write my own code, as websites built on bootstrap has similar look and feeling. Codeacademy.com helped me a lot to understand how this framework works. My second personal challenge was to create a masked video background for the main page, that also responsive and does not use too much bandwidth on mobile devices.  In overall the website was not perfect, there is room for improvement, but we have followed all the project management guidelines and best practices, therefore our group has been awarded with a first mark at the end of the term.</p>
 				
 					
@@ -75,6 +76,7 @@
 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('.tooltip').tooltipster();

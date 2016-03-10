@@ -9,11 +9,12 @@
   <meta name="author" content="Krisztian Pinter">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/main.css">
 
 
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
   <![endif]-->
   
 
@@ -32,7 +33,7 @@
 	
 	<!--NAVIGATION-->
 
-		<nav role="navigation" id="skiptonav">
+		<nav class="main-nav" role="navigation" id="skiptonav">
 				<ul>
 					<li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a></li>
 					<li><a href="about.html" title="About Kris" class="tooltip">About</a></li>
@@ -48,7 +49,7 @@
 		
 		<img src="img/version1.jpg" alt="First version of my website" title="Long main page." class="heroimg">
 		
-		<h1 class="blog-title">Portfolio Review</h1>
+		<h1 class="hero-title">Portfolio Review</h1>
 
 		<p>I have reviewed my portfolio multiple times with my tutors, classmates and industry professionals. Some key usability issues were found during the tests. I have created a list of issues and solutions:</p>
 		<p><strong>Issue #1:</strong> The main page were too long, and the navigation triggered only if the user scrolled down on the page to a certain point, thus some people did not notice the navigation bar and have not seen the rest of the pages.</p>
@@ -83,6 +84,7 @@
 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.tooltipster.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     <script>
         $(document).ready(function() {
             $('.tooltip').tooltipster();

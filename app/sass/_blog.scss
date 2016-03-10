@@ -19,10 +19,14 @@
 
 
 .heroimg {
-	margin-top: 6em;
+	margin-top: 3em;
 }
 
-.container .blog-title {
+.container {
+	ul li {
+	font-family: $body;
+	}
+	.blog-title {
 	margin-top: 0em;
 }
-
+}
