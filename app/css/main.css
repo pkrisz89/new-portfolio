@@ -286,8 +286,8 @@ blockquote {
 /************** PORTFOLIO ****************/
 .work h1 {
   padding-bottom: 0;
-  font-size: 100px;
-  font-size: 6.25rem; }
+  font-size: 80px;
+  font-size: 5rem; }
 
 ul#filter {
   list-style: none;
@@ -357,6 +357,70 @@ ul#portfolio {
 
 .container .blog-title {
   margin-top: 0em; }
+
+/************** CONTACT ****************/
+.contact-info {
+  margin: 0 auto;
+  text-align: center;
+  background: #fff;
+  border: 1px #333 solid;
+  opacity: 0.8;
+  width: 22em;
+  max-width: 95%;
+  padding: 2%;
+  margin-bottom: 6%; }
+
+.contact {
+  min-height: 90vh;
+  background: url("../img/contact-bg.jpg");
+  /* https://www.pixabay.com CC0 License*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center; }
+  .contact h1 {
+    text-align: center;
+    font-family: "Lobster";
+    color: #CC3300;
+    font-size: 60px;
+    font-size: 3.75rem; }
+
+.contact .row a {
+  padding-bottom: 2em;
+  margin: 2em;
+  text-align: center; }
+
+#form {
+  border: 1px #333 solid;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2%;
+  background: #5C5C5C;
+  opacity: 0.9;
+  max-width: 90%;
+  margin-bottom: 2em; }
+
+#name, #email, #message, #submit {
+  display: block;
+  padding: 4%;
+  opacity: 0.9;
+  text-align: center;
+  margin: 0 auto;
+  width: 300px;
+  max-width: 90%; }
+
+#message {
+  height: 200px; }
+
+label {
+  font-family: "EB Garamond";
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em; }
 
 /***General styles***/
 *, *:after, *:before {
