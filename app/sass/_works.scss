@@ -18,6 +18,27 @@
 }
 }
 
+.post {
+	h1 {
+	padding-bottom: 0;
+	margin-top: 3em;
+	@include font-size(30px);
+		@include small-screen {
+			margin-top: 3em;
+			padding: 0;
+			}
+		@include medium-screen {
+			margin-top: 3em;
+			padding: 0;
+			@include font-size(60px);
+			}
+	img {
+	padding-bottom: 3em;
+	}		
+}
+}
+
+
 ul#filter { 
   list-style: none; 
   margin-left: 0; 

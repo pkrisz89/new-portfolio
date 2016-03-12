@@ -1,16 +1,14 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
-var useref = require('gulp-useref');
-var uglify = require('gulp-uglify');
-var gulpIf = require('gulp-if');
 var minifyCSS = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
-var del = require('del');
 var runSequence = require('run-sequence');
+var prettify = require('gulp-html-prettify');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -48,20 +46,25 @@ gulp.task('watch', function() {
 // Optimization Tasks
 // ------------------
 
-// Optimizing CSS and JavaScript
-gulp.task('useref', function() {
-  var assets = useref.assets();
+// optimising JavaScript files
 
-  return gulp.src('app/*.html')
-    .pipe(assets)
-    // Minifies only if it's a CSS file
-    .pipe(gulpIf('*.css', minifyCSS()))
-    // Uglifies only if it's a Javascript file
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(assets.restore())
-    .pipe(useref())
-    .pipe(gulp.dest('dist'))
+// Minify+Autoprefix+Concat CSS
+
+gulp.task('css', function(){
+    gulp.src('app/css/*.css')
+    .pipe(minifyCSS())
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+    .pipe(concat('style.min.css'))
+    .pipe(gulp.dest('dist/css'))
 });
+
+gulp.task('js', function(){
+    gulp.src('app/js/*.js')
+    .pipe(uglify())
+    .pipe(concat('app.min.js'))
+    .pipe(gulp.dest('dist/js'))
+});
+
 
 // Optimizing Images
 gulp.task('images', function() {
@@ -79,14 +82,11 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 })
 
-// Cleaning
-gulp.task('clean', function(callback) {
-  del('dist');
-  return cache.clearAll(callback);
-})
-
-gulp.task('clean:dist', function(callback) {
-  del(['dist/**/*', '!dist/img', '!dist/img/**/*'], callback)
+// Prettifying HTML
+gulp.task('templates', function() {
+  gulp.src('app/*.html')
+    .pipe(prettify({indent_char: ' ', indent_size: 2}))
+    .pipe(gulp.dest('dist/'))
 });
 
 // Build Sequences
@@ -99,8 +99,8 @@ gulp.task('default', function(callback) {
 })
 
 gulp.task('build', function(callback) {
-  runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
+  runSequence(
+    ['css', 'js' , 'images', 'fonts', 'templates'],
     callback
   )
 })

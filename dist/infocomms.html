@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Krisztian Pinter | Journalism, Information and Communications Website</title>
+  <meta name="description" content="My thoughts about the rebuild of our department's website.">
+  <meta name="author" content="Krisztian Pinter">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+
+</head>
+
+<body>
+
+  <!--SKIPLINKS-->
+  <p class="skiplinks">
+    <a href="#skipnav">Skip to content</a>
+    <a href="#skiptonav">Skip to navigation</a>
+  </p>
+
+
+
+  <!--NAVIGATION-->
+
+  <nav class="main-nav" role="navigation" id="skiptonav">
+    <ul>
+      <li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a>
+      </li>
+      <li><a href="about.html" title="About Kris" class="tooltip">About</a>
+      </li>
+      <li><a href="works.html" title="Front-end and UX showcase" class="tooltip coloured">Work</a>
+      </li>
+      <li><a href="blog.html" title="Read about my thoughts" class="tooltip">Blog</a>
+      </li>
+      <li><a href="contact.html" title="Get in touch" class="tooltip">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main class="container" role="main">
+    <section id="skipnav">
+
+      <h1 class="hero-title">Journalism, Information and Communications Website</h1>
+      <h2 class="title">About the project</h2>
+      <p>I had a Website Design unit in the second year of my University studies. We had to form groups of five people. Our task was to completely rebuild the department’s website. We have applied agile scrum project management methodology. We had regular
+        sprint meetings with our clients (tutors). During the project, we have also used some fundamental UX tools. Our lo-fi wireframes were made with AXURE RP, we conducted card sorting and created personas with user journeys. When the website was ready,
+        we tested it with different users, then refined it based on the user feedbacks. The user testing was really practical, as we could get first-hand information from the potential users.</p>
+
+      <img src="img/ico-1.jpg" alt="MMU Information and Communications website main page." title="Infocomms website">
+
+
+
+      <h2 class="title">Challenges</h2>
+      <p>When we came up with a final wireframe idea, I started to code the website. Due to the fact, that we were not allowed to use frameworks, and the card layout of the main page, I decided to use flexbox. From an earlier project I had a basic understanding
+        of this tool, but this website was much bigger with more possible issues. With few hours coding and researching I could overcome the problems and create the basic layout of the website. The biggest challenge was the implementation of the Twitter
+        feed on the main page. I have spent significant amount of time on the solution, and I found a clever script that implements Twitter feed on any website, which turned out later on, it was not the best idea, because the website has created too many
+        html request. Next time I have to combine my .css and .js assets into one file. Lesson learned.
+      </p>
+
+
+
+
+
+      <img src="img/ico-2.jpg" alt="MMU Information and Communications website about page." title="Infocomms website about page.">
+
+
+
+
+      <p><a href="works/group08/index.html" title="Website of Journalism, Information and Communications" target="_blank">Visit the website</a>
+      </p>
+
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer role="contentinfo">
+    <hr>
+    <p>© 2016 Krisztian Pinter. All rights reserved</p>
+  </footer>
+
+  <script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/app.min.js"></script>
+  <script>
+    <!-- Tooltipster -->
+    	$(document).ready(function() {
+                $('.tooltip').tooltipster();
+            });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Krisztian Pinter | My old portfolio</title>
+  <meta name="description" content="My thoughts about how I built my old portfolio.">
+  <meta name="author" content="Krisztian Pinter">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+
+</head>
+
+<body>
+
+  <!--SKIPLINKS-->
+  <p class="skiplinks">
+    <a href="#skipnav">Skip to content</a>
+    <a href="#skiptonav">Skip to navigation</a>
+  </p>
+
+
+
+  <!--NAVIGATION-->
+
+  <nav class="main-nav" role="navigation" id="skiptonav">
+    <ul>
+      <li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a>
+      </li>
+      <li><a href="about.html" title="About Kris" class="tooltip">About</a>
+      </li>
+      <li><a href="works.html" title="Front-end and UX showcase" class="tooltip coloured">Work</a>
+      </li>
+      <li><a href="blog.html" title="Read about my thoughts" class="tooltip">Blog</a>
+      </li>
+      <li><a href="contact.html" title="Get in touch" class="tooltip">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main class="container" role="main">
+    <section id="skipnav">
+
+      <h1 class="hero-title">My Old Portfolio</h1>
+      <h2 class="title">About the project</h2>
+      <p>I have made this website for a second year University subject, called Website Development. The task was very straightforward: I had to create a basic responsive portfolio website to showcase my University work. I had to put emphasis on semantic,
+        valid HTML5, good SEO and accessibility practices. We were not allowed to use any framework.</p>
+      <img src="img/old-1.jpg" alt="My old portfolio website on mobile and laptop." title="My old portfolio website.">
+
+
+      <h2 class="title">Challenges</h2>
+      <p>I have faced multiple challenges during this project. Firstly I have never created a one-page layout, therefore I had to read upon things such as how to apply a smooth scroll script. The second challenge was to find out how to make each section
+        to fit on one screen, regardless to the size of the device. It was a perfect occasion to experiment the flexbox model. Due to the simple layout, it was easy to understand how it works, hence it has become very useful tool for my later projects.
+        I was particularly happy with the outcome, I received first mark and loads of positive feedback from my fellow students.</p>
+
+      <p><a href="works/old/index.html" title="My Old Portfolio" target="_blank">Visit the website</a>
+      </p>
+
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer role="contentinfo">
+    <hr>
+    <p>© 2016 Krisztian Pinter. All rights reserved</p>
+  </footer>
+
+  <script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/app.min.js"></script>
+  <script>
+    $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+  </script>
+</body>
+
+</html>
