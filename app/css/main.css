@@ -13,7 +13,7 @@
   font-size: 20px;
   font-size: 1.25rem; }
   .wf-active .title {
-    font-family: "Jura"; }
+    font-family: "Oswald"; }
 
 .hero-title {
   font-family: Georgia;
@@ -75,6 +75,7 @@ blockquote {
   margin: 0 auto;
   text-align: center; }
   blockquote p {
+    color: #CC3300;
     font-style: italic;
     font-size: 20px;
     font-size: 1.25rem;
@@ -124,12 +125,11 @@ blockquote {
   background: #fff;
   width: 100%;
   padding: 3%;
-  z-index: 1;
+  z-index: 999;
   border-bottom: 1px #333 solid;
   position: fixed;
   top: 0; }
   .main-nav ul li {
-    font-family: 'EB Garamond', serif;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -141,7 +141,7 @@ blockquote {
     .main-nav ul li a {
       text-decoration: none;
       color: #000;
-      font-family: 'Garamond';
+      font-family: "Oswald";
       font-weight: 300;
       font-size: 20px;
       font-size: 1.25rem;
@@ -323,9 +323,9 @@ ul#portfolio {
   text-align: center;
   padding-top: 2em; }
   ul#portfolio li {
-    margin: 0 1em 1em 0;
-    padding: 0.5em;
-    width: 14em;
+    margin: 1em 0;
+    padding: 0;
+    max-width: 100%;
     display: inline-block; }
     ul#portfolio li a {
       width: 100%;
@@ -337,6 +337,61 @@ ul#portfolio {
       ul#portfolio li a:hover {
         text-decoration: none;
         transition: ease .9s; }
+
+/****/
+.titlezoom {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none; }
+
+.titlezoom:before {
+  display: block;
+  background-color: #000;
+  content: "";
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 2; }
+
+.titlezoom:after {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  content: attr(title);
+  left: -100%;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 5%;
+  width: 94%;
+  z-index: 3;
+  padding: 2% 3%; }
+
+.titlezoom img {
+  border: none;
+  display: block;
+  z-index: 1; }
+
+.titlezoom:before, .titlezoom:after, .titlezoom img {
+  -webkit-transition: all 200ms ease;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease; }
+
+.titlezoom:hover img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2); }
+
+.titlezoom:hover:before {
+  opacity: 0.3; }
+
+.titlezoom:hover:after {
+  left: 0; }
 
 /************** BLOG ****************/
 .blogpost {
@@ -351,6 +406,8 @@ ul#portfolio {
   .blogpost h2 {
     text-align: center;
     font-weight: 400; }
+  .blogpost p {
+    margin-bottom: 1em; }
 
 .heroimg {
   margin-top: 3em; }
@@ -412,7 +469,7 @@ ul#portfolio {
   padding: 4%;
   opacity: 0.9;
   text-align: center;
-  margin: 0 auto;
+  margin: .5em auto;
   width: 300px;
   max-width: 90%; }
 

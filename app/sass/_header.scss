@@ -36,6 +36,7 @@ blockquote {
   margin: 0 auto;
   text-align: center;
 	p {
+      color: $span;
 	  font-style: italic;
 	  @include font-size(20px);
 	  text-align: center;

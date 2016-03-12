@@ -1,6 +1,6 @@
 var WebFontConfig = {
 	google: {
-		families: [ 'Jura',
+		families: [ 'Oswald:300',
 					'EB Garamond',
 					'Lobster'
 							]
