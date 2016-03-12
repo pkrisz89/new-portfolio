@@ -25,40 +25,48 @@
 
 .soft-skills p {
 	border-top: 1px $black solid;
-	padding: 2%;
+	padding: 5%;
+	margin: auto;
 	line-height: 1.3;
 	max-width: 25em;
 	letter-spacing: 0.05em;
 	text-align: left;
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	-ms-hyphens: auto;
 	hyphens: auto;
 }
 
-.soft-skills .row .item {
+.soft-skills .row{
+	align-items: center;
+	.item {
 	background: $grey;
 	border-radius: 5%;
 	opacity: 0.9;
 	margin: 1em;
-	padding: auto;
+	padding: 1em;
 	border: 1px $black solid;
-	
+	max-width: 30em;
+	@include medium-screen{
+			margin: auto;
+			}
+	@include medium-screen{
+			margin: 1em;
+			}
 		span {
 			color: $black;
 		}
+	}
 }
 
-
 .skewed-bg {
-  /*background-image: url("../img/soft-bg.jpg");*/
+  
   background: $white;
   padding: 0;
   -ms-transform: skew(0deg, -5deg);
   -webkit-transform: skew(0deg, -5deg);
   transform: skew(0deg, -5deg);
   margin-top: -12em;
-  
+  @include medium-screen{
+  background-image: url("../img/soft-bg.jpg");
+  }
 	.soft-skills {
 	  -ms-transform: skew(0deg, 5deg);
 	  -webkit-transform: skew(0deg, 5deg);
@@ -69,7 +77,11 @@
 		h1 {
 			padding-top: 3em;
 			padding-bottom: 1em;
+			
+			@include small-screen {
+			padding-top: 2em;
 			}
+		}
 	}
 }
 
@@ -90,7 +102,13 @@
 					display: inline-block;
 					color: $white;
 					transform: translateY(-50%);
+					
+					@include medium-screen{
+					@include font-size(20px);
 					}
+					}
+				
+					
 			}	
 			.love ul li {
 				background: $lovered;
@@ -99,6 +117,9 @@
 				padding: 0.2em;
 				border-radius: 5px;
 				opacity: 0.9;
+				@include medium-screen {
+				padding: 0.8em;
+				}
 			}
 			.hate ul li {
 				background: $black;
@@ -107,6 +128,9 @@
 				padding: 0.2em;
 				border-radius: 5px;
 				opacity: 0.9;
+				@include medium-screen {
+				padding: 0.8em;
+				}
 				}
 					span {
 						padding-right: 5%;
@@ -115,6 +139,9 @@
 						opacity: 0.4;
 						position: relative;
 						overflow: hidden;
+						@include medium-screen {
+						@include font-size(12px);
+				}
 					}
 }
 			
@@ -122,13 +149,14 @@
 
 .skewed-bg2 {
 	background-color: $lightgold;
-	/*background-image: url("../img/lovehate.jpg");
-	background-size: cover;*/
 	padding: 0.1em;
 	-ms-transform: skew(0deg, -5deg);
 	-webkit-transform: skew(0deg, -5deg);
 	transform: skew(0deg, -5deg);
-	
+	@include medium-screen{
+	background-image: url("../img/lovehate.jpg");
+	background-size: cover;
+	}
 		.lovehate {
 		  -ms-transform: skew(0deg, 5deg);
 		  -webkit-transform: skew(0deg, 5deg);
@@ -138,7 +166,9 @@
 			  -ms-transform: skew(0deg, -5deg);
 			  -webkit-transform: skew(0deg, -5deg);
 			  transform: skew(0deg, -5deg);
-			  text-shadow: 5px 5px 3px rgba(150, 150, 150, 1);
+			 padding-top: .5em !important;
+			  
+
 			}
 		}
 }
@@ -156,7 +186,7 @@
 	background: $cta !important;
 	opacity: 0.8;
 	display: block;
-	max-width: 85%;
+	max-width: 20em;
 	margin-bottom: 2em;
 	 -ms-transform: skew(0deg, 5deg);
 		  -webkit-transform: skew(0deg, 5deg);

@@ -3,7 +3,7 @@
 .main-nav {
 	background: #fff;
 	width: 100%;
-	padding: 3%;
+	padding: 1.5em;
 	z-index: 999;
 	border-bottom: 1px #333 solid;
 	position: fixed;
@@ -26,7 +26,10 @@
 		font-family: $header;
 		font-weight: 300;
 		@include font-size(20px)
-		padding-right: .5em;
+		padding-right: .65em;
+		@include small-screen {
+			padding-right: 1.5em;
+			}
 }
 
 }

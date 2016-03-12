@@ -28,6 +28,10 @@
 			font-family: $hero-header;
 			color: $hero-title;
 			@include font-size(60px);
+			@include font-size(80px);
+			@include small-screen {
+			padding-top: 1.5em;
+			}
 		}
 }
 

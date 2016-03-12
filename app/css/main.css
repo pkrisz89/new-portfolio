@@ -5,6 +5,9 @@
   .wf-active & {
     font-family: $hero-title; }
 }**/
+h1, h2, h3 {
+  margin: 0; }
+
 .title {
   font-family: Georgia;
   color: #525252;
@@ -14,18 +17,43 @@
   font-size: 1.25rem; }
   .wf-active .title {
     font-family: "Oswald"; }
+  @media only screen and (min-width: 37.5em) {
+    .title {
+      font-size: 30px;
+      font-size: 1.875rem; } }
+  @media only screen and (min-width: 120em) {
+    .title {
+      font-size: 50px;
+      font-size: 3.125rem; } }
 
 .hero-title {
   font-family: Georgia;
   color: #525252;
   font-weight: 400;
   text-align: center;
-  margin: 0;
+  margin-top: 1em;
   padding: 4rem 1%;
+  text-shadow: 2px 2px 2px white;
   font-size: 30px;
   font-size: 1.875rem; }
   .wf-active .hero-title {
     font-family: "Lobster"; }
+  @media only screen and (min-width: 37.5em) {
+    .hero-title {
+      padding-top: 3em;
+      font-size: 45px;
+      font-size: 2.8125rem; } }
+  @media only screen and (min-width: 50em) {
+    .hero-title {
+      padding-top: 2em;
+      font-size: 70px;
+      font-size: 4.375rem; } }
+  @media only screen and (min-width: 120em) {
+    .hero-title {
+      padding-top: 1em;
+      margin-top: 0;
+      font-size: 100px;
+      font-size: 6.25rem; } }
 
 p {
   font-family: "EB Garamond";
@@ -33,6 +61,8 @@ p {
   font-size: 16px;
   font-size: 1rem;
   padding: 0.5%;
+  padding-left: 3%;
+  padding-right: 3%;
   margin: 1%;
   letter-spacing: 0.02em;
   -webkit-hyphens: auto;
@@ -42,6 +72,12 @@ p {
   line-height: 1.3;
   text-align: justify;
   color: #333; }
+  @media only screen and (min-width: 37.5em) {
+    p {
+      font-size: 120%; } }
+  @media only screen and (min-width: 120em) {
+    p {
+      font-size: 140%; } }
 
 /***Helper Classes****/
 .centered {
@@ -51,56 +87,62 @@ p {
 
 /************** HEADER & INTRO ****************/
 .header {
-  background-image: url("../img/swirl_pattern.png");
+  background: url("../img/header-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
   border-bottom: 1px #333 solid; }
 
 .coloured {
   color: #CC3300 !important; }
 
-.hero .row .item p.herotext {
-  background: #fff;
-  border: 1px #eee solid;
-  padding: 5%;
-  border-radius: 5%;
-  margin-bottom: 2em; }
+.hero .row {
+  align-items: center; }
+  @media only screen and (min-width: 120em) {
+    .hero .row {
+      max-width: 65em; } }
+  .hero .row .item .herotext {
+    background: #fff;
+    border: 1px #eee solid;
+    padding: 5%;
+    max-width: 35em;
+    opacity: 0.7; }
+  .hero .row .item img {
+    padding-bottom: 2em;
+    height: auto;
+    max-width: 100%; }
 
-.hero .row .item img {
-  padding-bottom: 2em;
-  height: auto;
-  max-width: 100%; }
+.bubble {
+  border-radius: 5px;
+  display: inline-block;
+  padding: 10px 18px;
+  position: relative;
+  vertical-align: top; }
+  .bubble::before {
+    background-color: #fff;
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: 11px;
+    transform: rotate(29deg) skew(-35deg);
+    -moz-transform: rotate(29deg) skew(-35deg);
+    -ms-transform: rotate(29deg) skew(-35deg);
+    -o-transform: rotate(29deg) skew(-35deg);
+    -webkit-transform: rotate(29deg) skew(-35deg);
+    width: 20px; }
 
-blockquote {
-  margin: 1.5em 10px;
-  padding: 1em;
-  margin: 0 auto;
-  text-align: center; }
-  blockquote p {
-    color: #CC3300;
-    font-style: italic;
-    font-size: 20px;
-    font-size: 1.25rem;
-    text-align: center; }
-  blockquote:before {
-    color: #333;
-    content: open-quote;
-    font-size: 60px;
-    font-size: 3.75rem;
-    line-height: 0.1em;
-    vertical-align: -2rem; }
-  blockquote:after {
-    color: #333;
-    content: close-quote;
-    font-size: 60px;
-    font-size: 3.75rem;
-    line-height: 0.1em;
-    vertical-align: -2.5rem; }
+.me {
+  float: left;
+  margin: 5px 45px 5px 20px; }
+  .me::before {
+    box-shadow: -2px 2px 2px 0 rgba(178, 178, 178, 0.4);
+    left: -9px; }
 
 .button2 {
   padding: 1em 2em;
   border: 1px #333 solid;
   font-family: "EB Garamond";
   color: #333;
-  margin: 0 auto;
+  margin: 1em auto;
   text-align: center;
   max-width: 15em;
   display: block;
@@ -124,7 +166,7 @@ blockquote {
 .main-nav {
   background: #fff;
   width: 100%;
-  padding: 3%;
+  padding: 1.5em;
   z-index: 999;
   border-bottom: 1px #333 solid;
   position: fixed;
@@ -145,7 +187,10 @@ blockquote {
       font-weight: 300;
       font-size: 20px;
       font-size: 1.25rem;
-      padding-right: .5em; }
+      padding-right: .65em; }
+      @media only screen and (min-width: 37.5em) {
+        .main-nav ul li a {
+          padding-right: 1.5em; } }
 
 /************** HARD SKILLS ****************/
 .greyscale {
@@ -167,34 +212,43 @@ blockquote {
 /************** SOFT SKILLS ****************/
 .soft-skills p {
   border-top: 1px #333 solid;
-  padding: 2%;
+  padding: 5%;
+  margin: auto;
   line-height: 1.3;
   max-width: 25em;
   letter-spacing: 0.05em;
   text-align: left;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
   hyphens: auto; }
 
-.soft-skills .row .item {
-  background: #eee;
-  border-radius: 5%;
-  opacity: 0.9;
-  margin: 1em;
-  padding: auto;
-  border: 1px #333 solid; }
-  .soft-skills .row .item span {
-    color: #333; }
+.soft-skills .row {
+  align-items: center; }
+  .soft-skills .row .item {
+    background: #eee;
+    border-radius: 5%;
+    opacity: 0.9;
+    margin: 1em;
+    padding: 1em;
+    border: 1px #333 solid;
+    max-width: 30em; }
+    @media only screen and (min-width: 50em) {
+      .soft-skills .row .item {
+        margin: auto; } }
+    @media only screen and (min-width: 50em) {
+      .soft-skills .row .item {
+        margin: 1em; } }
+    .soft-skills .row .item span {
+      color: #333; }
 
 .skewed-bg {
-  /*background-image: url("../img/soft-bg.jpg");*/
   background: #fff;
   padding: 0;
   -ms-transform: skew(0deg, -5deg);
   -webkit-transform: skew(0deg, -5deg);
   transform: skew(0deg, -5deg);
   margin-top: -12em; }
+  @media only screen and (min-width: 50em) {
+    .skewed-bg {
+      background-image: url("../img/soft-bg.jpg"); } }
   .skewed-bg .soft-skills {
     -ms-transform: skew(0deg, 5deg);
     -webkit-transform: skew(0deg, 5deg);
@@ -204,6 +258,9 @@ blockquote {
     .skewed-bg .soft-skills h1 {
       padding-top: 3em;
       padding-bottom: 1em; }
+      @media only screen and (min-width: 37.5em) {
+        .skewed-bg .soft-skills h1 {
+          padding-top: 2em; } }
 
 .soft-skills .row:last-child {
   padding-bottom: 2em; }
@@ -218,6 +275,10 @@ blockquote {
       display: inline-block;
       color: #fff;
       transform: translateY(-50%); }
+      @media only screen and (min-width: 50em) {
+        .lovehate .row .item ul p {
+          font-size: 20px;
+          font-size: 1.25rem; } }
   .lovehate .row .love ul li {
     background: #cc0000;
     color: #fff;
@@ -225,6 +286,9 @@ blockquote {
     padding: 0.2em;
     border-radius: 5px;
     opacity: 0.9; }
+    @media only screen and (min-width: 50em) {
+      .lovehate .row .love ul li {
+        padding: 0.8em; } }
   .lovehate .row .hate ul li {
     background: #333;
     color: #fff;
@@ -232,6 +296,9 @@ blockquote {
     padding: 0.2em;
     border-radius: 5px;
     opacity: 0.9; }
+    @media only screen and (min-width: 50em) {
+      .lovehate .row .hate ul li {
+        padding: 0.8em; } }
   .lovehate .row span {
     padding-right: 5%;
     font-size: 8px;
@@ -240,15 +307,21 @@ blockquote {
     opacity: 0.4;
     position: relative;
     overflow: hidden; }
+    @media only screen and (min-width: 50em) {
+      .lovehate .row span {
+        font-size: 12px;
+        font-size: 0.75rem; } }
 
 .skewed-bg2 {
   background-color: #efe1b5;
-  /*background-image: url("../img/lovehate.jpg");
-	background-size: cover;*/
   padding: 0.1em;
   -ms-transform: skew(0deg, -5deg);
   -webkit-transform: skew(0deg, -5deg);
   transform: skew(0deg, -5deg); }
+  @media only screen and (min-width: 50em) {
+    .skewed-bg2 {
+      background-image: url("../img/lovehate.jpg");
+      background-size: cover; } }
   .skewed-bg2 .lovehate {
     -ms-transform: skew(0deg, 5deg);
     -webkit-transform: skew(0deg, 5deg);
@@ -257,7 +330,7 @@ blockquote {
       -ms-transform: skew(0deg, -5deg);
       -webkit-transform: skew(0deg, -5deg);
       transform: skew(0deg, -5deg);
-      text-shadow: 5px 5px 3px #969696; }
+      padding-top: .5em !important; }
 
 /************** CV Download ****************/
 .button {
@@ -271,7 +344,7 @@ blockquote {
   background: #004600 !important;
   opacity: 0.8;
   display: block;
-  max-width: 85%;
+  max-width: 20em;
   margin-bottom: 2em;
   -ms-transform: skew(0deg, 5deg);
   -webkit-transform: skew(0deg, 5deg);
@@ -286,8 +359,19 @@ blockquote {
 /************** PORTFOLIO ****************/
 .work h1 {
   padding-bottom: 0;
+  margin-top: 0.25em;
   font-size: 80px;
   font-size: 5rem; }
+  @media only screen and (min-width: 37.5em) {
+    .work h1 {
+      margin-top: 1em;
+      padding: 0; } }
+  @media only screen and (min-width: 50em) {
+    .work h1 {
+      margin-top: 1em;
+      padding: 0; } }
+  .work h1 img {
+    padding-bottom: 3em; }
 
 ul#filter {
   list-style: none;
@@ -295,9 +379,13 @@ ul#filter {
   max-width: 100%;
   text-align: center;
   margin: 0 auto;
-  background: #eee; }
+  background: #333;
+  padding: .5em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 7px 8px 13px 0px #8a8a8a; }
   ul#filter a {
-    color: #333;
+    color: #fff;
     text-decoration: none; }
   ul#filter li {
     border-right: 1px solid #dedede;
@@ -313,28 +401,31 @@ ul#filter li.current a, ul#filter a:hover {
   text-decoration: underline; }
 
 ul#filter li.current a {
-  color: #333;
+  color: #fff;
   font-weight: bold; }
 
-ul#portfolio {
+.row #portfolio {
   list-style: none;
-  margin-left: 0;
   margin: 0 auto;
-  text-align: center;
   padding-top: 2em; }
-  ul#portfolio li {
+  @media only screen and (min-width: 50em) {
+    .row #portfolio {
+      display: flex;
+      flex-wrap: wrap; } }
+  .row #portfolio .item {
     margin: 1em 0;
-    padding: 0;
-    max-width: 100%;
-    display: inline-block; }
-    ul#portfolio li a {
+    padding: 0; }
+    @media only screen and (min-width: 50em) {
+      .row #portfolio .item {
+        width: calc(100% * (1/2));
+        margin: 0; } }
+    .row #portfolio .item a {
       width: 100%;
-      display: inline-block;
       text-decoration: none;
       font-family: "EB Garamond";
       font-weight: 400;
       letter-spacing: 0.05em; }
-      ul#portfolio li a:hover {
+      .row #portfolio .item a:hover {
         text-decoration: none;
         transition: ease .9s; }
 
@@ -406,17 +497,42 @@ ul#portfolio {
   .blogpost h2 {
     text-align: center;
     font-weight: 400; }
+    @media only screen and (min-width: 37.5em) {
+      .blogpost h2 {
+        font-size: 30px;
+        font-size: 1.875rem; } }
   .blogpost p {
-    margin-bottom: 1em; }
+    padding-bottom: 1em;
+    padding-top: 1em;
+    max-width: 450px;
+    margin: auto; }
 
 .heroimg {
-  margin-top: 3em; }
+  margin: 0 auto;
+  text-align: center; }
+
+@media only screen and (min-width: 120em) {
+  .container h1 {
+    font-size: 70px;
+    font-size: 4.375rem; } }
+
+.container h2, .container h3 {
+  margin-left: 3%;
+  margin-right: 3%; }
 
 .container ul li {
-  font-family: "EB Garamond"; }
+  font-family: "EB Garamond";
+  padding: 0.5%;
+  margin: 1%;
+  letter-spacing: 0.02em;
+  list-style-type: none; }
 
 .container .blog-title {
   margin-top: 0em; }
+
+.container .hero-title {
+  padding-top: 0em;
+  padding-bottom: 0em; }
 
 /************** CONTACT ****************/
 .contact-info {
@@ -447,7 +563,12 @@ ul#portfolio {
     font-family: "Lobster";
     color: #CC3300;
     font-size: 60px;
-    font-size: 3.75rem; }
+    font-size: 3.75rem;
+    font-size: 80px;
+    font-size: 5rem; }
+    @media only screen and (min-width: 37.5em) {
+      .contact h1 {
+        padding-top: 1.5em; } }
 
 .contact .row a {
   padding-bottom: 2em;
@@ -529,7 +650,7 @@ img {
   max-width: 100%; }
 
 .container {
-  max-width: 90%;
+  max-width: 50em;
   margin: auto; }
 
 /************** FLEX BOX ****************/
@@ -541,6 +662,9 @@ img {
   max-width: 55em;
   margin: 0 auto;
   flex-direction: column; }
+  @media only screen and (min-width: 50em) {
+    .row {
+      flex-direction: row; } }
 
 .item {
   -webkit-box-flex: 1;

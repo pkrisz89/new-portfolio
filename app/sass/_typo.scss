@@ -7,6 +7,9 @@
     font-family: $hero-title; }
 }**/
 
+h1, h2, h3 {
+margin: 0;
+}
 
 .title {
 	font-family: $default ;
@@ -16,6 +19,12 @@
 	@include font-size(20px)
 	.wf-active & {
     font-family: $header; }
+	@include small-screen {
+			@include font-size(30px)
+			}
+	@include large-screen {
+			@include font-size(50px)
+			}
 }
 
 .hero-title {
@@ -23,11 +32,27 @@
 	color: $title;
 	font-weight: 400;
 	text-align: center;
-	margin: 0;
+	margin-top: 1em;
 	padding: 4rem 1%;
+	text-shadow: 2px 2px 2px rgba(255, 255, 255, 1);
 	@include font-size(30px)
 	.wf-active & {
     font-family: $hero-header; }
+	
+	@include small-screen {
+			padding-top: 3em;
+			@include font-size(45px)
+			}
+	@include medium-screen{
+			padding-top: 2em;
+			@include font-size(70px)
+	}
+	
+	@include large-screen{
+			padding-top: 1em;
+			margin-top: 0;
+			@include font-size(100px)
+	}
 }
 
 p {
@@ -35,6 +60,8 @@ p {
 	font-weight: 400;
 	@include font-size(16px);
 	padding: 0.5%;
+	padding-left: 3%;
+	padding-right: 3%;
 	margin: 1%;
 	letter-spacing: 0.02em;
 	-webkit-hyphens: auto;
@@ -44,4 +71,10 @@ p {
 	 line-height: 1.3;
 	 text-align: justify;
 	 color: $black;
+	 @include small-screen{
+	 font-size: 120%;
+	 }
+	 @include large-screen{
+	 font-size: 140%;
+	 }
 }

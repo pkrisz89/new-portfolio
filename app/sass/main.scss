@@ -64,7 +64,7 @@ img {
 }
 
 .container {
-	max-width: 90%;
+	max-width: 50em;
 	margin: auto;
 }
 
@@ -80,6 +80,9 @@ img {
 	max-width: 55em;
 	margin: 0 auto;
 	flex-direction: column;
+	@include medium-screen{
+			flex-direction: row;
+	}
 }
 
 

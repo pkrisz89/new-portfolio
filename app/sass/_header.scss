@@ -1,7 +1,8 @@
 /************** HEADER & INTRO ****************/
 
 .header{
-	background-image: url("../img/swirl_pattern.png");
+	background: url("../img/header-bg.jpg") no-repeat  center center fixed;
+	background-size: cover;
 	border-bottom: 1px #333 solid;
 }
 
@@ -12,14 +13,19 @@
 
 
 
-.hero .row .item  {
-	
-		p.herotext {
+.hero .row{
+		align-items: center;
+		@include large-screen{
+		max-width: 65em;
+		}
+ .item  {
+		.herotext {
 			background: $white;
 			border: 1px $grey solid;
 			padding: 5%;
-			border-radius: 5%;
-			margin-bottom: 2em;
+			
+			max-width: 35em;
+			opacity: 0.7;
 		}
 		img {
 			padding-bottom: 2em;
@@ -27,37 +33,42 @@
 			max-width: 100%;
 			}
 }
-
-
-
-blockquote {
-  margin: 1.5em 10px;
-  padding: 1em;
-  margin: 0 auto;
-  text-align: center;
-	p {
-      color: $span;
-	  font-style: italic;
-	  @include font-size(20px);
-	  text-align: center;
-	  }
-	&:before {
-	  color: $black;
-	  content: open-quote;
-	  @include font-size(60px);
-	  line-height: 0.1em;
-	  vertical-align: -2rem;
-	  
-	}
-	&:after {
-	  color: $black;
-	  content: close-quote;
-	  @include font-size(60px);
-	  line-height: 0.1em;
-	  vertical-align: -2.5rem;
-
-	}
 }
+
+.bubble{
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+	
+	&::before {
+    background-color: $white;
+    content: "\00a0";
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: 11px;
+    transform:             rotate( 29deg ) skew( -35deg );
+        -moz-transform:    rotate( 29deg ) skew( -35deg );
+        -ms-transform:     rotate( 29deg ) skew( -35deg );
+        -o-transform:      rotate( 29deg ) skew( -35deg );
+        -webkit-transform: rotate( 29deg ) skew( -35deg );
+    width:  20px;
+}
+}
+
+
+
+.me {
+    float: left;   
+    margin: 5px 45px 5px 20px;   
+ &::before {
+    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+    left: -9px;     	
+}
+}
+
 
 
 .button2 {
@@ -65,7 +76,7 @@ blockquote {
 	border: 1px #333 solid;
 	font-family: $body;
 	color: $black;
-	margin: 0 auto;
+	margin: 1em auto;
 	text-align: center;
 	max-width: 15em;
 	display: block;

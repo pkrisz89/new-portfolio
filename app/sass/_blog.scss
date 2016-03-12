@@ -13,23 +13,52 @@
 		h2 {
 			text-align: center;
 			font-weight: 400;
+			@include small-screen {
+			@include font-size(30px);
+			}
 		}
 		p{
-		margin-bottom:1em;
+		padding-bottom:1em;
+		padding-top:1em;
+		max-width: 450px;
+		margin: auto;
 		}
 
 }
 
 
 .heroimg {
-	margin-top: 3em;
+	margin: 0 auto;
+	
+	text-align: center;
+	
 }
 
 .container {
+	h1{
+	@include large-screen{
+	@include font-size(70px);
+	}
+	}
+
+	h2,h3{
+	margin-left: 3%;
+	margin-right: 3%;
+	}
+
+
 	ul li {
 	font-family: $body;
+	padding: 0.5%;
+	margin: 1%;
+	letter-spacing: 0.02em;
+	list-style-type:none;
 	}
 	.blog-title {
 	margin-top: 0em;
 }
+	.hero-title {
+	padding-top: 0em;
+	padding-bottom: 0em;
+	}
 }
