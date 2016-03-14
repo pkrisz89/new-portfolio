@@ -5,7 +5,6 @@
 	text-align: center; 
 	background: $white;
 	border: 1px $black solid;
-	opacity: 0.8;
 	width: 22em;
 	max-width: 95%;
 	padding: 2%;
@@ -14,27 +13,15 @@
 
 .contact {
 	min-height: 90vh;
-	background: url('../img/contact-bg.jpg'); /* https://www.pixabay.com CC0 License*/
-	background-repeat:no-repeat;
-	background-size: cover;
+	background: url('../img/contact-bg.jpg') !important;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	-webkit-align-items: center; 
 			align-items: center;
-		h1 {
-			text-align: center;
-			font-family: $hero-header;
-			color: $hero-title;
-			@include font-size(60px);
-			@include font-size(80px);
-			@include small-screen {
-			padding-top: 1.5em;
-			}
+	
 		}
-}
-
 
 
 .contact .row a {
@@ -50,7 +37,6 @@
   text-align: center;
   padding: 2%;
   background: $darkgrey;
-  opacity: 0.9;
   max-width: 90%;
   margin-bottom: 2em;
 }
@@ -58,7 +44,6 @@
 #name, #email, #message, #submit {
 	display: block;
 	padding: 4%;
-	opacity: 0.9;
 	text-align: center;
 	margin: .5em auto;
 	width: 300px;

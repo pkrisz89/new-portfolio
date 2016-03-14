@@ -1,4 +1,9 @@
 /************** BLOG ****************/
+.blog {
+	text-align: center;
+	background: url("../img/about-bg.jpg");
+}
+
 
 .blogpost {
 	box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) ;
@@ -29,13 +34,17 @@
 
 .heroimg {
 	margin: 0 auto;
-	
+	margin-top: 5em;
 	text-align: center;
-	
 }
+
 
 .container {
 	h1{
+	margin-top: 3em;
+	@include medium-screen{
+	margin-top: 2em;
+	}
 	@include large-screen{
 	@include font-size(70px);
 	}

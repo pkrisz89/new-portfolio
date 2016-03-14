@@ -1,8 +1,7 @@
 /************** HEADER & INTRO ****************/
 
 .header{
-	background: url("../img/header-bg.jpg") no-repeat  center center fixed;
-	background-size: cover;
+	background: url("../img/background.jpg");
 	border-bottom: 1px #333 solid;
 }
 
@@ -18,14 +17,13 @@
 		@include large-screen{
 		max-width: 65em;
 		}
+ 
  .item  {
 		.herotext {
 			background: $white;
 			border: 1px $grey solid;
 			padding: 5%;
-			
 			max-width: 35em;
-			opacity: 0.7;
 		}
 		img {
 			padding-bottom: 2em;
@@ -34,6 +32,7 @@
 			}
 }
 }
+
 
 .bubble{
     border-radius: 5px;

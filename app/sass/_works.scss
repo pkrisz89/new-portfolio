@@ -1,22 +1,9 @@
 /************** PORTFOLIO ****************/
 .work {
-	h1 {
-	padding-bottom: 0;
-	margin-top: 0.25em;
-	@include font-size(80px);
-		@include small-screen {
-			margin-top: 1em;
-			padding: 0;
-			}
-		@include medium-screen {
-			margin-top: 1em;
-			padding: 0;
-			}
-	img {
-	padding-bottom: 3em;
-	}		
+	text-align: center;
+	background: url("../img/about-bg2.jpg");
 }
-}
+
 
 .post {
 	h1 {
@@ -93,9 +80,6 @@ ul#filter li.current a {
   
 	
 	 .item { 
-	  margin: 1em 0; 
-	  padding: 0;
-	  
 	  	@include medium-screen {
 		width: calc(100% * (1/2);
 		margin: 0;
