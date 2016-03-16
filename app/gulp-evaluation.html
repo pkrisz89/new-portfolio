@@ -1,0 +1,223 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Krisztian Pinter | Gulp.js project - Evaluation</title>
+  <meta name="description" content="My experiences about using Gulp at first time.">
+  <meta name="author" content="Krisztian Pinter">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:300|' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+
+</head>
+
+<body>
+
+  <!--SKIPLINKS-->
+  <p class="skiplinks">
+    <a href="#skipnav">Skip to content</a>
+    <a href="#skiptonav">Skip to navigation</a>
+  </p>
+
+
+
+  <!--NAVIGATION-->
+
+  <nav class="main-nav" role="navigation" id="skiptonav">
+    <ul>
+      <li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a>
+      </li>
+      <li><a href="about.html" title="About Kris" class="tooltip">About</a>
+      </li>
+      <li><a href="works.html" title="Front-end and UX showcase" class="tooltip">Work</a>
+      </li>
+      <li><a href="blog.html" title="Read about my thoughts" class="tooltip coloured">Blog</a>
+      </li>
+      <li><a href="contact.html" title="Get in touch" class="tooltip">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main class="container" role="main">
+    <section id="skipnav">
+
+      <img src="img/gulp.jpg" alt="Gulp logo" title="Task automation with Gulp.js" class="heroimg">
+
+<h1 class="hero-title">Gulp.js – Project Evaluation</h1>
+
+<p><strong>Aim:</strong></p>
+<p>To rebuild my portfolio website, with automated workflow for a better website performance.</p>
+<ul>
+<li><strong>Objectives:</strong></li>
+<li>To research on useful Gulp plugins</li>
+<li>To write my own, reusable Gulp file</li>
+<li>Develop the website with automated Gulp tasks</li>
+<li>Measure the performance and compare the results with the old website.</li>
+</ul>
+<p>After getting a solid understanding how Gulp works, I had to decide which tasks I’d like to use in Gulp. <a href="http://lynda.com" target="_blank">Lynda.com</a> has recommended a few plugins, but when I tried them, they did not exactly work the same way as it was shown on the video.  Thus I had to research and customize my own plugins, as a benefit of that, I gained a deeper understanding on the topic. <a href="http://gulpjs.com/plugins/" target="_blank">http://gulpjs.com/plugins/</a> has more than 2000 Gulp extensions available, it seemed a great plugin library to choose from.</p>
+<p>I have chosen the following tasks:</p>
+<ul>
+<li><strong>Gulp Sass:</strong> Automatically compiles sass files to css.</li>
+<li><strong>Gulp Autoprefixer:</strong>  Appends different vendor prefixes to the css.</li>
+<li><strong>BrowserSync:</strong>  Sets up a local server that automatically refreshes the browser window, whenever a file is saved in the project.</li>
+<li><strong>MinifyCSS:</strong>  Minifies the CSS.</li>
+<li><strong>Imagemin:</strong>  Optimizes the image assets (I have observed if I only optimize my images with Photoshop, Google Pagespeed still sends an error message about optimization, with this plugin the error message disappears)</li>
+<li><strong>Prettify:</strong>  This plugin beautifies the html files, with removing the unnecessary indentation it creates a clean markup.</li>
+<li><strong>Uglify:</strong>  It does exactly the opposite to Prettify. It minifies the JavaScript assets.</li>
+<li><strong>Concat:</strong>  This plugin concatenates (merges) the css and js assets into one single file.</li>
+</ul>
+<p>On the top of this, I have created 2 different sequences:</p>
+<p>Default Gulp sequence: Consists a few development tasks that helps me when I build a website.</p>
+<p>Build Sequence: Consists the tasks that are required when the development finishes ( such as concatenating and file optimization)<p>
+<p>When I have finished with the configuration of my Gulp file, it looked like this:</p>
+
+<p><code>var gulp = require('gulp');<br>
+var sass = require('gulp-sass');<br>
+var autoprefixer = require('gulp-autoprefixer');<br>
+var browserSync = require('browser-sync');<br>
+var minifyCSS = require('gulp-minify-css');<br>
+var imagemin = require('gulp-imagemin');<br>
+var cache = require('gulp-cache');<br>
+var runSequence = require('run-sequence');<br>
+var prettify = require('gulp-html-prettify');<br>
+var uglify = require('gulp-uglify');<br>
+var concat = require('gulp-concat');<br>
+
+
+<span class="coloured">// Development Tasks<br>
+// -----------------<br></span>
+
+<span class="coloured">// Start browserSync server<br></span>
+gulp.task('browserSync', function() {<br>
+  browserSync({<br>
+    server: {<br>
+      baseDir: 'app'<br>
+    }<br>
+  })<br>
+})<br>
+
+gulp.task('sass', function() {<br>
+  return gulp.src('app/sass/**/*.scss') <span class="coloured">// Gets all files ending with .scss in app/sass and children dirs<br></span>
+    .pipe(sass()) <span class="coloured">// Passes it through a gulp-sass<br></span>
+    .pipe(gulp.dest('app/css')) <span class="coloured">// Outputs it in the css folder<br></span>
+    .pipe(browserSync.reload({ <span class="coloured">// Reloading with Browser Sync<br></span>
+      stream: true<br>
+    }));<br>
+})<br>
+
+<span class="coloured">// Watchers<br></span>
+gulp.task('watch', function() {<br>
+  gulp.watch('app/sass/**/*.scss', ['sass']);<br>
+  gulp.watch('app/*.html', browserSync.reload);<br>
+  gulp.watch('app/js/**/*.js', browserSync.reload);<br>
+})<br>
+
+<span class="coloured">// Optimization Tasks<br>
+// ------------------<br>
+
+// optimising JavaScript files<br>
+
+// Minify+Autoprefix+Concat CSS<br></span>
+
+gulp.task('css', function(){<br>
+    gulp.src('app/css/*.css')<br>
+    .pipe(minifyCSS())<br>
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))<br>
+    .pipe(concat('style.min.css'))<br>
+    .pipe(gulp.dest('dist/css'))<br>
+});<br>
+
+gulp.task('js', function(){<br>
+    gulp.src('app/js/*.js')<br>
+    .pipe(uglify())<br>
+    .pipe(concat('app.min.js'))<br>
+    .pipe(gulp.dest('dist/js'))<br>
+});<br>
+
+
+<span class="coloured">// Optimizing Images<br></span>
+gulp.task('images', function() {<br>
+  return gulp.src('app/img/**/*.+(png|jpg|jpeg|gif|svg)')<br>
+  <span class="coloured">// Caching images that ran through imagemin<br></span>
+  .pipe(cache(imagemin({<br>
+      interlaced: true,<br>
+    })))<br>
+  .pipe(gulp.dest('dist/img'))<br>
+});<br>
+
+<span class="coloured">// Copying fonts<br></span>
+gulp.task('fonts', function() {<br>
+  return gulp.src('app/fonts/**/*')<br>
+  .pipe(gulp.dest('dist/fonts'))<br>
+})<br>
+
+<span class="coloured">// Prettifying HTML<br></span>
+gulp.task('templates', function() {<br>
+  gulp.src('app/*.html')<br>
+    .pipe(prettify({indent_char: ' ', indent_size: 2}))<br>
+    .pipe(gulp.dest('dist/'))<br>
+});<br>
+
+<span class="coloured">// Build Sequences<br>
+// ---------------<br></span>
+
+gulp.task('default', function(callback) {<br>
+  runSequence(['sass', 'browserSync', 'watch'],<br>
+    callback<br>
+  )<br>
+})<br>
+
+gulp.task('build', function(callback) {<br>
+  runSequence(<br>
+    ['css', 'js' , 'images', 'fonts', 'templates'],<br>
+    callback<br>
+  )<br>
+})</code></p><br>
+
+
+<p>As it is visible from my source file, Gulp is working with 2 different directories:</p>
+<p>‘App’ folder with original, development files, and there is a ‘Dist’ folder with optimized assets. It makes easier to manage the project and what to upload on our server.</p>
+<p>When I was ready with the development stage and the website was live, I have conducted a performance comparison between my old site and new site. Firstly I have used Google PageSpeed Insights. The overall mobile performance score has increased from 67 to 75. This increase was due to the image optimization and css/js minification. See the image below. </p>
+<img src="img/pagespeed-old.jpg" alt="Google Pagespeed Insights results of the old website">
+<br>
+<img src="img/pagespeed-new.jpg" alt="Google Pagespeed Insights results of the new website">
+<p>The second test was on <a href="http://www.webpagetest.org/" target="_blank">http://www.webpagetest.org/</a> (The website was recommended by speakers on UpFrontConf 2015). It has provided far more detailed results. Therefore I could figure out I cut off almost 1 second from the loading time of my website from 2.5s to 1.6s and I reduced the http requests from 28 to 21. See the images below.</p>
+<img src="img/pagetest-old.jpg" alt="WebPagetest.org results of the old website" class="centered">
+<br>
+<img src="img/pagetest-new.jpg" alt="WebPagetest.org results of the old website"  class="centered">
+<p>To sum it up it worth to use this powerful tool, not just because it is an industry standard at web development agencies, but the amount of time it saves and the optimized output is incredibly efficient in terms of performance.</p>
+<p>If you want to know more about this topic, I recommend to read <a href="https://www.smashingmagazine.com/2014/06/building-with-gulp/" target="_blank">this article on Smashing Mag.</a><p>
+<p>If you want to see my original dev files, check out my GitHub repository <a href="https://github.com/pkrisz89/new-portfolio">https://github.com/pkrisz89/new-portfolio</a></p>
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer role="contentinfo">
+    <hr>
+    <p>© 2016 Krisztian Pinter. All rights reserved</p>
+  </footer>
+
+  <script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/app.min.js"></script>
+  <script>
+    $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+  </script>
+</body>
+
+</html>

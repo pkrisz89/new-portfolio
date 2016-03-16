@@ -1,0 +1,91 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Krisztian Pinter | Task Automation - Account of my learning</title>
+  <meta name="description" content="This post is about how did I learn Task automation.">
+  <meta name="author" content="Krisztian Pinter">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:300|' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+
+</head>
+
+<body>
+
+  <!--SKIPLINKS-->
+  <p class="skiplinks">
+    <a href="#skipnav">Skip to content</a>
+    <a href="#skiptonav">Skip to navigation</a>
+  </p>
+
+
+
+  <!--NAVIGATION-->
+
+  <nav class="main-nav" role="navigation" id="skiptonav">
+    <ul>
+      <li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a>
+      </li>
+      <li><a href="about.html" title="About Kris" class="tooltip">About</a>
+      </li>
+      <li><a href="works.html" title="Front-end and UX showcase" class="tooltip">Work</a>
+      </li>
+      <li><a href="blog.html" title="Read about my thoughts" class="tooltip coloured">Blog</a>
+      </li>
+      <li><a href="contact.html" title="Get in touch" class="tooltip">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main class="container" role="main">
+    <section id="skipnav">
+
+      <img src="img/gulpvsgrunt.jpeg" alt="Gulp versus Grunt logo" title="Which one should I choose?" class="heroimg">
+
+      <h1 class="hero-text>"Task automation with Gulp.js – Account of my learning</h1>
+		<h2 class="title">Why did I choose this project?</h2>
+		<p>On one hand I have always been frustrated about repetitive tasks in web development, it is slow and boring to manually optimize images with Photoshop or minimize and merge css/js files one by one. On the other hand, performance optimisation is very important, therefore I was looking for a solution to speed up my workflow and optimize my assets.</p>
+		<p>During the last year of my University degree, we had numerous guest speakers in our lectures and I was able to talk many of them. Probably I was mostly influenced by the guys from Code Computerlove, who recommended me to build my websites on mobile first approach, and try to automate my workflow.</p>
+		<h2 class="title">What does task automation means exactly? What are task runners?</h2>
+		<p>Task runners are tools that helping you out with several tasks when it comes to web development. It's often used to do front end tasks like setting up a web server, reloading the browser whenever a file is saved, compiling preprocessors like Sass or LESS and optimizing, merging CSS, JS or image assets. Automatically. Sounds good isn’t it?</p>
+		<p>If you consider how much time is wasted by optimizing images or hitting refresh on your browser every time you have changed something on your website, you will realize that you can be saving a lot of time. Additionally, by automating your workflow, you can stay focused on the task at hand instead of temporarily leaving “the zone” (your state of productivity).</p>
+		<p>There was two options to choose from. Option one was Grunt with a cool wild boar logo, which is an instant win, and there was Gulp.js as the second option. I have read several blogposts about Gulp vs Grunt, and after a discussion with an industry expert I chose Gulp, due to its relatively easy configuration and speed advantage over Grunt.</p>
+		<p>I completed the ‘Web Project Workflows with Gulp.js, Git, and Browserify’ course on <a href="http://lynda.com" target="_blank">Lynda.com.</a> It gave me a good foundation of task runners, but I felt the video was a bit outdated and further research was required on the topic.</p>
+		<p>As always, I found outstanding articles on <a href="https://www.smashingmagazine.com/2014/06/building-with-gulp/" target="_blank">Smashing Magazine</a> and <a href="https://css-tricks.com/gulp-for-beginners/" target="_blank">CSS-Tricks</a>, thus I was able to begin the configuration of my first ever gulp file.</p>
+		<p>To start off with Gulp.js, a basic JavaScript knowledge is required in order to configure the gulp file correctly, which is a bit time consuming at first, but it is reusable on later projects. </p>
+		<p>As a demonstration of learning, I have rebuilt my website using Gulp.js. I have reused the core js, css files and content, therefore the efficiency could be measured with performance measuring tools, such as Google PageSpeed Insights and Webpagetest.</p>
+		<p>If you want to read more about my experiences with this project, please read my next blog entry about Gulp.js – Project evaluation.</p>
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer role="contentinfo">
+    <hr>
+    <p>© 2016 Krisztian Pinter. All rights reserved</p>
+  </footer>
+
+  <script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/app.min.js"></script>
+  <script>
+    $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Krisztian Pinter | SASS & Mobile First - Project Evaluation</title>
+  <meta name="description" content="This post is about my experiences with SASS and Mobile-First approach.">
+  <meta name="author" content="Krisztian Pinter">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:300|' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/style.min.css">
+
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+
+</head>
+
+<body>
+
+  <!--SKIPLINKS-->
+  <p class="skiplinks">
+    <a href="#skipnav">Skip to content</a>
+    <a href="#skiptonav">Skip to navigation</a>
+  </p>
+
+
+
+  <!--NAVIGATION-->
+
+  <nav class="main-nav" role="navigation" id="skiptonav">
+    <ul>
+      <li><a href="index.html" title="Kris Pinter - Web Developer" class="tooltip">Home</a>
+      </li>
+      <li><a href="about.html" title="About Kris" class="tooltip">About</a>
+      </li>
+      <li><a href="works.html" title="Front-end and UX showcase" class="tooltip">Work</a>
+      </li>
+      <li><a href="blog.html" title="Read about my thoughts" class="tooltip coloured">Blog</a>
+      </li>
+      <li><a href="contact.html" title="Get in touch" class="tooltip">Contact</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <main class="container" role="main">
+    <section id="skipnav">
+
+      <img src="img/sass-blogevaluation.jpg" alt="Endless lines of code on the screen" title="Coding JavaScript." class="heroimg">
+
+      <h1 class="hero-title">Mobile First & SASS – Project Evaluation</h1>
+      <p><strong>Aim:</strong> To rebuild my portfolio website using SASS & Mobile First approach.</p>
+      <ul>
+        <li><strong>Objectives:</strong> 
+        </li>
+        <li>To investigate the best practices</li>
+        <li>To extract and reuse some of the styles and other elements from the old website</li>
+        <li>To find a way that the stylesheet can be easier to manage.</li>
+        <li>To save different stages with a version control system (GIT)</li>
+      </ul>
+      <p>As I mentioned in my previous blog post, in order to get deeper understanding, I had to research on both topics. <a href="http://sass-lang.com/">The official SASS website</a> has helped to understand the importance of variables, mixins and nesting.
+        I used the basic SCSS syntax in my code, which is similar to normal CSS, unlike the SASS syntax that does not use any curly brackets and semicolons, only indentation.</p>
+      <p>See the image below:</p>
+      <img src="img/sass-screenshot.jpg" alt="Sass syntax" title="Screenshot from sass-lang.com">
+      <p><a href="http://zellwk.com/blog/how-to-write-mobile-first-css/" target="_blank">Zell Liew’s blogpost about ‘How to write mobile-first css’</a> has helped me to understand the principles of mobile first. After the research phase, armed with fresh
+        knowledge, I was ready to start the coding.</p>
+      <p>I was able to reuse some of the core styles from my old site, and nest them into each other.</p>
+      <p>See the image below:</p>
+      <img src="img/nested-sass.jpg" alt="Nested SCSS" title="Screenshot from my scss code">
+      <p>I have saved all the colours and fonts into variables, thus I could reuse them multiple times across my stylesheet. I gave them meaningful names (such as $title : #525252 for headings ) as it will always make sense, even if I change the colour of
+        the variable.</p>
+      <p>To make the files easier to manage, I have only applied the general styles on my main stylesheet (skip links, containers, footer and link ), the rest of my styles are sorted into 10 different stylesheets and imported to the main file. As every page
+        is different on the website, I have created a scss file for every page, a variables and a mixins file too. With simple CSS, I was unable to do this without significant performance loss, but fortunately SASS concatenates the imported files if the
+        filename starts with an underscore (e.g. _mixins.scss).</p>
+      <p>See the image below:</p>
+      <img src="img/sass-files.jpg" alt="My scss files in a folder" title="Structure of my uncompiled scss files.">
+      <p>I have created a few mixins (reusable blocks) in this project. Probably the two most commonly used were the media query and font-size mixins.</p>
+      <p>In the media query mixin, I have defined three different screen-sizes, see the following code snippet:</p>
+      <p><code>@mixin large-screen {<br>
+			  @media only screen and (min-width: 120em) {<br>
+				@content;<br>
+			  }<br>
+			}<br>
+
+			@mixin medium-screen {<br>
+			  @media only screen and (min-width: 50em) {<br>
+				@content;<br>
+			  }<br>
+			}<br>
+
+			@mixin small-screen {<br>
+			  @media only screen and (min-width: 37.5em) {<br>
+				@content;
+			  }<br>
+			}</code>
+        <p>
+          <p>These media query mixins were nested to each declaration block in the following way:</p>
+          <p><code>		.my-name{<br>
+		background: $white;<br>
+		color: $title;<br>
+		text-align: center;<br>
+		padding: 1%;<br>
+		text-shadow: 2px 2px 2px rgba(255, 255, 255, 1);<br>
+			
+			@include small-screen {      <span class="coloured">//breakpoint for small screens</span><br>
+					@include font-size(45px)<br>
+					}<br>
+			@include medium-screen{       <span class="coloured">//breakpoint for medium-size screens</span><br>
+					margin-top: 2em;<br>
+					@include font-size(80px)<br>
+			}<br>
+			@include large-screen{     <span class="coloured">//breakpoint for large screens</span><br>
+					margin-top: 1.5em;<br>
+					@include font-size(100px)<br>
+			}<br>
+		}</p></code>
+            <p>I have created a font-size mixin, which is using px for older browsers and outputs rem for modern browsers.</p>
+            <p>See the following code snippet:</p>
+            <p><code>@function calculateRem($size) { <br>
+		  $remSize: $size / 16px;   // 1 rem = 16px<br>
+		  @return $remSize * 1rem;<br>
+		}<br>
+
+		@mixin font-size($size) {<br>
+		  font-size: $size;  <span class="coloured">//Firstly it will output the size in px for older browsers</span><br>
+		  font-size: calculateRem($size); <span class="coloured"> //Then in rem for modern browsers</span><br>
+		}</p></code>
+              <p>I have saved everything on my public GitHub repo, feel free to <a href="https://github.com/pkrisz89/new-portfolio">download it</a>
+              </p>
+
+
+    </section>
+  </main>
+
+  <!--FOOTER-->
+  <footer role="contentinfo">
+    <hr>
+    <p>© 2016 Krisztian Pinter. All rights reserved</p>
+  </footer>
+
+  <script type="text/javascript" src="js/vendor/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="js/app.min.js"></script>
+  <script>
+    $(document).ready(function() {
+            $('.tooltip').tooltipster();
+        });
+  </script>
+</body>
+
+</html>
